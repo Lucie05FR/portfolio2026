@@ -1,7 +1,19 @@
-<div class="container mt-5">
-  <h1 class="text-primary">A</h1>
+<div class=".container-fluid">
+  <h1 class="text-primary">Projets</h1>
+  <div class="card text-center">
+    <div class="card-header">Featured</div>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">
+        With supporting text below as a natural lead-in to additional content.
+      </p>
+      @for (project of this.projectService.projects; track project) {
+        <app-project [project]="project"></app-project>
+      }
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-body-secondary">2 days ago</div>
+  </div>
 
-  <button class="btn btn-success">
-    Bouton
-  </button>
+  <button class="btn btn-success">Bouton</button>
 </div>

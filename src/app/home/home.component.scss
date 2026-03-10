@@ -1,24 +1,13 @@
-.card:hover {
-  transition: all 0.5s ease;
-  color: var(--bs-primary);
-  background-color: var(--bs-secondary);
-}
-.card {
-  transition: all 0.5s ease;
-}
-
 h5 {
   color: var(--bs-primary);
 }
 
-.body {
-  padding: 30px 100px !important;
+::ng-deep .card:hover {
+  transform: scale(1.02);
+  color: var(--bs-primary);
+  background-color: var(--bs-secondary);
 }
 
-button {
-  margin-right: 8px;
+::ng-deep .card {
+  transition: all 0.3s ease;
 }
-
-// .card-text {
-//   margin-bottom: 5px;
-// }

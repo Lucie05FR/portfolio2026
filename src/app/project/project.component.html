@@ -1,24 +1,242 @@
-<!-- <div class="container mt-5">
-  <h3>{{ this.project.name }}</h3>
-  <span class="badge text-bg-secondary">{{ this.project.madeFor }}</span>
-</div>
-<div class="card mb-3" style="max-width: 540px">
-  @if (this.haveImages) {
-    <div class="col-md-4">
-      <img
-        src="{{ this.project.pictures[0].emplacement }}"
-        class="img-fluid rounded-start"
-        alt="{{ this.project.pictures[0].description }}"
-      />
-    </div>
+<div class="row g-0 h-100">
+  @if (project) {
+    @if (project.pictures && project.pictures.length > 0) {
+      <div class="container row">
+        <div class="col-8">
+          <h3 class="text-center">
+            {{ project.name }}
+          </h3>
+          <div class="gap-1 text-center mb-5">
+            @for (other of toArray(project.subject); track other) {
+              <button type="button" class="btn btn-secondary btn-sm" disabled>
+                {{ other }}
+              </button>
+            }
+          </div>
+
+          <!-- DESCRIPTION -->
+          @if (project.description) {
+            <h5 class="text-info">
+              <i class="bi bi-pin-fill text-info"></i> Description du projet
+            </h5>
+            <p>
+              {{ project.description }}
+            </p>
+            @if (project.details) {
+              <p>
+                {{ project.details }}
+              </p>
+            }
+          }
+
+          <!-- TECHNOLOGIES -->
+          @if (
+            project.langages ||
+            project.IDE ||
+            project.frameworks ||
+            project.other
+          ) {
+            <h5 class="text-info mt-4">
+              <i class="bi bi-tools text-info"></i> Technologies, outils
+              utilisés
+            </h5>
+
+            <div class="d-flex flex-wrap gap-2">
+              @if (project.langages) {
+                <div class="border p-3 rounded">
+                  <h6>
+                    <i class="bi bi-code-slash"></i> Langage{{
+                      isArray(project.langages) && project.langages.length > 1
+                        ? "s"
+                        : ""
+                    }}
+                  </h6>
+                  <div class="d-flex flex-wrap gap-1">
+                    @for (langage of toArray(project.langages); track langage) {
+                      <button
+                        type="button"
+                        class="btn btn-secondary btn-sm"
+                        disabled
+                      >
+                        {{ langage }}
+                      </button>
+                    }
+                  </div>
+                </div>
+              }
+
+              @if (project.frameworks) {
+                <div class="border p-3 rounded">
+                  <h6>
+                    <i class="bi bi-box"></i> Framework{{
+                      isArray(project.frameworks) &&
+                      project.frameworks.length > 1
+                        ? "s"
+                        : ""
+                    }}
+                  </h6>
+                  <div class="d-flex flex-wrap gap-1">
+                    @for (
+                      framework of toArray(project.frameworks);
+                      track framework
+                    ) {
+                      <button
+                        type="button"
+                        class="btn btn-info btn-sm"
+                        disabled
+                      >
+                        {{ framework }}
+                      </button>
+                    }
+                  </div>
+                </div>
+              }
+
+              @if (project.IDE) {
+                <div class="border p-3 rounded">
+                  <h6><i class="bi bi-laptop"></i> IDE</h6>
+                  <div class="d-flex flex-wrap gap-1">
+                    @for (ide of toArray(project.IDE); track ide) {
+                      <button
+                        type="button"
+                        class="btn btn-secondary btn-sm"
+                        disabled
+                      >
+                        {{ ide }}
+                      </button>
+                    }
+                  </div>
+                </div>
+              }
+
+              @if (project.other) {
+                <div
+                  class="border p-3 rounded"
+                  style="background-color: var(--bs-secondary)"
+                >
+                  <h6>
+                    <i class="bi bi-tools"></i> Autre{{
+                      isArray(project.other) && project.other.length > 1
+                        ? "s"
+                        : ""
+                    }}
+                  </h6>
+                  <div class="d-flex flex-wrap gap-1">
+                    @for (other of toArray(project.other); track other) {
+                      <button
+                        type="button"
+                        class="btn btn-info btn-sm"
+                        disabled
+                      >
+                        {{ other }}
+                      </button>
+                    }
+                  </div>
+                </div>
+              }
+            </div>
+          }
+
+          @if (project.madeFor || project.collaborators) {
+            <h5 class="text-info mt-4">
+              <i class="bi bi-people-fill text-info"></i> Acteurs du projets
+            </h5>
+            <!-- CLIENT -->
+            @if (project.madeFor) {
+              <div class="d-flex">
+                <p class="mb-2">
+                  <span class="text-info"
+                    >Réalisé
+                    {{
+                      project.madeFor === "l'université Lyon 1"
+                        ? "au cours de mes études à"
+                        : "pour"
+                    }} </span
+                  >{{ project.madeFor }}
+                </p>
+              </div>
+            }
+
+            <!-- COLLABORATORS -->
+            @if (project.collaborators) {
+              <div class="mb-3 mt-0">
+                <h6 class="text-info">Collaborateurs :</h6>
+                <div class="d-flex flex-wrap gap-2">
+                  @for (
+                    collaborator of getCollaborators(project.collaborators);
+                    track collaborator
+                  ) {
+                    <a
+                      [href]="collaborator.linkedin || collaborator.link || '#'"
+                      target="_blank"
+                      class="text-decoration-none"
+                    >
+                      <div
+                        class="border rounded px-3 py-2 d-flex align-items-center gap-2 collaborator-badge"
+                      >
+                        <i class="bi bi-person-fill text-info"></i>
+                        <span
+                          >{{ collaborator.lastName | uppercase }}
+                          {{ collaborator.firstName }}
+                        </span>
+                      </div>
+                    </a>
+                  }
+                </div>
+              </div>
+            }
+
+            @if (project.link) {
+              <div class="mb-3">
+                <h5 class="text-info mt-4">
+                  <i class="bi bi-link-45deg text-info"></i> Lien{{
+                    isArray(project.link) && project.link.length > 1 ? "s" : ""
+                  }}
+                  utile{{
+                    isArray(project.link) && project.link.length > 1 ? "s" : ""
+                  }}
+                </h5>
+                <div class="d-flex flex-wrap gap-2">
+                  @for (link of toArray(project.link); track link) {
+                    <a
+                      [href]="link"
+                      target="_blank"
+                      class="text-decoration-none"
+                    >
+                      <div
+                        class="border rounded px-3 py-2 d-flex align-items-center gap-2 link-badge"
+                      >
+                        <i class="bi bi-box-arrow-up-right text-info"></i>
+                        <span>{{ link }}</span>
+                      </div>
+                    </a>
+                  }
+                </div>
+              </div>
+            }
+          }
+        </div>
+        <div class="col-4">
+          @for (picture of this.project.pictures; track picture) {
+            <img
+              class="rounded m-1"
+              style="
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: fit-content;
+                object-fit: cover;
+              "
+              [src]="'assets/projects-images/' + picture.emplacement"
+              [alt]="picture.description"
+            />
+          }
+        </div>
+      </div>
+    } @else {
+      <h3 class="text-center">
+        {{ project.name }}
+      </h3>
+    }
   }
-  <div class="col-md-8">
-    <div class="card-body">
-      <h5 class="card-title">{{ this.project.name }}</h5>
-      <p class="card-text">{{ this.project.description }}</p>
-      <p class="card-text">
-        <span class="badge text-bg-secondary">{{ this.project.madeFor }}</span>
-      </p>
-    </div>
-  </div>
-</div> -->
+</div>

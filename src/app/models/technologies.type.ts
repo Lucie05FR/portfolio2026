@@ -1,6 +1,7 @@
 export const langages = [
   'Html',
-  'CSS/SCSS',
+  'CSS',
+  'SCSS',
   'PHP',
   'C++',
   'Java',
@@ -13,7 +14,7 @@ export const langages = [
   'Neo4j',
   'MongoDB',
   'TypeScript',
-];
+] as const;
 export type langageType = (typeof langages)[number];
 
 export const frameworks = [
@@ -24,7 +25,7 @@ export const frameworks = [
   'React',
   'Vue.js',
   'Next.js',
-];
+] as const;
 export type frameworkType = (typeof frameworks)[number];
 
 export const IDE = [
@@ -37,8 +38,7 @@ export const IDE = [
   'Spider',
   'PHP storm',
   'SQLite',
-  'Processing IDE',
-];
+] as const;
 export type IDEType = (typeof IDE)[number];
 
 export const other = [
@@ -61,7 +61,8 @@ export const other = [
   'Docker',
   'mailhog',
   'Notion',
-];
+  'Jira',
+] as const;
 
 export type otherType = (typeof other)[number];
 
@@ -69,8 +70,8 @@ export const subjects = [
   'Programmation',
   'Développement web',
   'Développement mobile',
-];
+] as const;
 export type subjectType = (typeof subjects)[number];
 
-export const environnements = ['Windows', 'Linux'];
+export const environnements = ['Windows', 'Linux'] as const;
 export type environnementType = (typeof environnements)[number];

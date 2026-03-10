@@ -1,5 +1,4 @@
-
-<div class="container-fluid body">
+<div class="container-fluid">
   <h3 class="h3 text-center">Portfolio</h3>
   <h5>Mes projets</h5>
   <div class="row row-cols-1 row-cols-md-2">
@@ -11,7 +10,7 @@
           [routerLink]="['/project', project.order]"
         >
           <div class="row g-0 h-100">
-            @if (project.pictures.length > 0) {
+            @if (project.pictures && project.pictures.length > 0) {
               <div
                 class="col-md-4"
                 style="position: relative; min-height: 120px"
@@ -39,13 +38,10 @@
                 <small class="card-text text-info mb-2">{{
                   project.shortDescription
                 }}</small>
-                <div class="container-fluid mt-auto p-0">
+                <div class="container-fluid mt-auto p-0 d-flex flex-wrap gap-2">
                   <!-- LANGAGES -->
-                  @if (this.isArray(project.technologies.langages)) {
-                    @for (
-                      langage of project.technologies.langages;
-                      track langage
-                    ) {
+                  @if (this.isArray(project.langages)) {
+                    @for (langage of project.langages; track langage) {
                       <button
                         type="button"
                         class="btn btn-secondary btn-sm"
@@ -55,22 +51,19 @@
                         {{ langage }}
                       </button>
                     }
-                  } @else if (project.technologies.langages) {
+                  } @else if (project.langages) {
                     <button
                       type="button"
                       class="btn btn-secondary btn-sm"
                       disabled
                       style="opacity: 70%; width: fit-content"
                     >
-                      {{ project.technologies.langages }}
+                      {{ project.langages }}
                     </button>
                   }
                   <!-- FRAMEWORKS -->
-                  @if (isArray(project.technologies.frameworks)) {
-                    @for (
-                      framework of project.technologies.frameworks;
-                      track framework
-                    ) {
+                  @if (isArray(project.frameworks)) {
+                    @for (framework of project.frameworks; track framework) {
                       <button
                         type="button"
                         class="btn btn-info btn-sm"
@@ -80,14 +73,14 @@
                         {{ framework }}
                       </button>
                     }
-                  } @else if (project.technologies.frameworks) {
+                  } @else if (project.frameworks) {
                     <button
                       type="button"
                       class="btn btn-info btn-sm"
                       disabled
                       style="opacity: 70%; width: fit-content"
                     >
-                      {{ project.technologies.frameworks }}
+                      {{ project.frameworks }}
                     </button>
                   }
                 </div>
@@ -98,4 +91,9 @@
       </div>
     }
   </div>
+</div>
+<div class="text-center mt-5">
+  <a href="#" class="btn btn-link text-center text-info"
+    >Revenir en haut de la page</a
+  >
 </div>

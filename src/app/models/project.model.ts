@@ -16,15 +16,13 @@ export interface ProjectModel {
   description?: string;
   details?: string;
   productTime: string;
-  pictures: Picture[];
+  pictures?: Picture[];
   madeFor?: clientType;
   collaborators?: CollaboratorKey[] | CollaboratorKey;
-  technologies: {
-    langages?: langageType | langageType[];
-    frameworks?: frameworkType | frameworkType[];
-    IDE?: IDEType;
-    other?: otherType | otherType[];
-  };
+  langages?: langageType | langageType[];
+  frameworks?: frameworkType | frameworkType[];
+  IDE?: IDEType;
+  other?: otherType | otherType[];
   subject?: subjectType[] | subjectType;
-  link?: string;
+  link?: string | string[];
 }

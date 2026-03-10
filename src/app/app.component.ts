@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { ProjectService } from './services/project.service';
+import { ProjectModel } from './models/project.model';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +14,6 @@ export class AppComponent {
   isClicked = false;
 
   constructor(public projectService: ProjectService) {}
-
-  isArray(element: any): boolean {
-    return Array.isArray(element);
-  }
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {

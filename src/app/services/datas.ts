@@ -38,6 +38,10 @@ export const projectsDetails: ProjectModel[] = [
     productTime: 'Septembre 2024 - Mars 2025',
     pictures: [
       {
+        emplacement: 'img22.png',
+        description: 'Logo du projet',
+      },
+      {
         emplacement: 'img5.jpg',
         description: "Première page de l'application mobile",
       },
@@ -69,7 +73,6 @@ export const projectsDetails: ProjectModel[] = [
     madeFor: 'Université Lyon 1',
     technologies: {
       langages: ['Html', 'CSS', 'PHP', 'SQL'],
-      frameworks: 'CakePHP',
       IDE: 'Visual Studio Code',
       other: 'GitLab',
     },
@@ -80,7 +83,7 @@ export const projectsDetails: ProjectModel[] = [
     order: 2,
     name: 'Un puissance 4 sur ESP32',
     shortDescription:
-      'Un site web pour la gestion et une application mobile pour les joueurs',
+      'Implémentation d\'un puissance 4 jouable sur un ou deux ESP32 connectés',
     description:
       'En duo, créer un puissance 4 jouable depuis un ESP 32, jouable avec un joystick et les leds (8x8) lié au microcontrolleur, le jeu peu se faire sur un unique ESP 32 ou deux différents connéctés. Projet durant ma 1ère année de BUT informatique.',
     productTime: 'Mai 2024',
@@ -171,6 +174,10 @@ export const projectsDetails: ProjectModel[] = [
       "Ce site a été créé dans le but de recenser toutes mes réalisations individuelles et collaboratifs, mes compétences en développement informatique. Il me permet aussi d\'alimenter à chaques nouveau projet, nouvelle compétences. Grâce à ça, les personnes succeptibles d\'être intéressé par mon profil ont accès en détail à mes acquis. Projet personnel.",
     productTime: 'Septembre 2025 - Mars 2026',
     pictures: [
+      {
+        emplacement: 'img21.png',
+        description: 'Logo des Estivales de Brou',
+      },
       { emplacement: 'img16.png', description: 'Première page du site' },
     ],
     collaborators: ['anaskadar', 'leabarnezet', 'thomasperrin'],
@@ -188,11 +195,16 @@ export const projectsDetails: ProjectModel[] = [
   {
     order: 6,
     name: "Implémentation d'un système d'inventaire",
-    shortDescription: 'Entretenir le site web des Estivales de Brou',
+    shortDescription:
+      "Ajout d'un inventaire à une architechture déjà mise en place",
     description:
       'Projet réalisé seule en 2 mois lors de mon stage de 2ᵉ année de BUT : développement d’un outil pour le Greta de l’Ain permettant de centraliser la gestion de son parc informatique (gestion des équipements, système de prêts et gestion d’images système).',
     productTime: 'Septembre 2025 - Mars 2026',
     pictures: [
+      {
+        emplacement: 'img20.png',
+        description: "Logo du Greta CFA de l'Ain",
+      },
       {
         emplacement: 'img19.png',
         description:

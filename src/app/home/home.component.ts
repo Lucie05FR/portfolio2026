@@ -12,4 +12,8 @@ export class HomeComponent {
   isArray(element: any): boolean {
     return Array.isArray(element);
   }
+
+  get sortedProjects() {
+    return [...this.projectService.projects].sort((a, b) => b.order - a.order);
+  }
 }

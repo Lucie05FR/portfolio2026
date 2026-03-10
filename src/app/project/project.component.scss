@@ -14,14 +14,3 @@ button {
 button:last-child {
   margin-right: 0px;
 }
-
-::ng-deep .collaborator-badge {
-  transition: all 0.3s ease;
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(1.05);
-    border-color: var(--bs-info) !important;
-    color: var(--bs-info);
-  }
-}

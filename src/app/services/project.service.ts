@@ -15,7 +15,11 @@ export class ProjectService {
   getProjectByName(name: string): ProjectModel | undefined {
     return this.projects.find((p) => p.name === name);
   }
+
   getProjectByOrder(id: number): ProjectModel | undefined {
     return this.projects.find((p) => p.order === id);
+  }
+  getProjectsByOrder() {
+    
   }
 }

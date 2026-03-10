@@ -1,5 +1,5 @@
 export const langages = [
-  'Html',
+  'HTML',
   'CSS',
   'SCSS',
   'PHP',

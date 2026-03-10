@@ -1,0 +1,226 @@
+import { ProjectModel } from '../models/project.model';
+
+export const projectsDetails: ProjectModel[] = [
+  // -------------------------------------------------------------------------
+  {
+    order: 5,
+    name: "Création d'un site de recettes",
+    shortDescription: 'Un site de recettes en PHP',
+    description:
+      "En duo, création d'un site de permettant la gestion de recettes de cuisine avec une base de données SQL. Seul l'administrateur peut ajouter ou modifier les recettes. Pour la partie des visiteurs, il est possible de consulter l'ensemble des recettes, leurs étapes de préparation et les ingrédients nécessaires. Il est également possible de faire générer une liste de courses, celle-ci recensera tout les ingrédients nécessaires ainsi que leur quantités en fonction des recettes présentent dans la liste. Projet réalisé durant ma seconde année de BUT informatique.",
+    productTime: 'Février 2025 - Avril 2025',
+    pictures: [
+      { emplacement: 'img1.jpg', description: 'Première page du site' },
+      { emplacement: 'img2.jpg', description: 'Page connexion' },
+      { emplacement: 'img3.jpg', description: "Page édition d'une recette" },
+      { emplacement: 'img4.jpg', description: "Page affichage d'une recette" },
+    ],
+    madeFor: 'Université Lyon 1',
+    collaborators: ['leabarnezet'],
+    technologies: {
+      langages: ['Html', 'CSS', 'PHP', 'SQL'],
+      frameworks: 'CakePHP',
+      IDE: 'PHP storm',
+      other: 'GitLab',
+    },
+    subject: 'Développement web',
+  },
+  // -------------------------------------------------------------------------
+  {
+    order: 4,
+    name: "Création d'un site de jeu de piste",
+    shortDescription:
+      'Un site web pour la gestion et une application mobile pour les joueurs',
+    description:
+      "Le projet consiste à créer une application mobile qui est destinée à de nouveaux élèves afin qu\'ils puissent visiter les bâtiments de  l\'université de manière amusante. <br> A côté de ça, un site web est accessible pour la personne qui sera en charge de préparer le jeu. Ce site a pour but de gérer le jeu de piste avant qu\'il ne soit jouable pour les élèves. Cette organisation consiste à s\'occuper de créer les énigmes, les paramètres de la partie et les lieux à visiter.",
+    details:
+      "Ce projet a sollicité 4 développeurs, nous avons décidé de faire des sous-équipes : 2 pour le back, 2 pour le front. Même si nous avons finalement tous plus ou moins touché aux deux, cela nous a permis de nous répartir plus efficacement les tâches. J\'ai principalement travaillé sur le visuel du site et de l\'application, par exemple j\'ai eu l\'occasion de beaucoup travailler sur les maquettes. Durant la création du site ou de l\'application, j\'ai travaillé sur le placement et le visuel des éléments. J\'ai aussi fait, par exemple, de faire en sorte qu\'un groupe d\'éléments ne se voient pas tous sans que l\'utilisateur ne le souhaite. J\'ai pu faire plusieurs pages qui ont pour but de regrouper un ensemble d\'éléments (des énigmes, des parties, ...) que j\'ai dû aller chercher dans la base de données. Projet de ma 2ème année de BUT informatique.",
+    productTime: 'Septembre 2024 - Mars 2025',
+    pictures: [
+      {
+        emplacement: 'img5.jpg',
+        description: "Première page de l'application mobile",
+      },
+      { emplacement: 'img6.png', description: 'Poster expliquant le projet' },
+      { emplacement: 'img7.png', description: 'Première page du site' },
+    ],
+    madeFor: 'Université Lyon 1',
+    collaborators: ['leabarnezet', 'elyneblanchard', 'benjaminrobert'],
+    technologies: {
+      langages: ['Dart'],
+      frameworks: 'Flutter',
+      IDE: 'Android Studio',
+      other: ['GitLab', 'Canva', 'Trello', 'Firebase'],
+    },
+    subject: ['Développement web', 'Développement mobile'],
+  },
+  // -------------------------------------------------------------------------
+  {
+    order: 3,
+    name: "Création d'un site de presse",
+    shortDescription:
+      "Un site web permettant de gérer un blog d'articles de presse",
+    description:
+      "Projet visant à apprendre à maitriser le PHP. Créer un site de gestion d'un blog d'articles, gérer les abonnements des visiteurs aux blogs, la créations et la gestion d'articles pour les utilisateurs connéctés. Exercice durant ma 2ème année de BUT informatique.",
+    productTime: 'Septembre 2024 - Octobre 2024',
+    pictures: [
+      { emplacement: 'img8.png', description: 'Première page du site' },
+    ],
+    madeFor: 'Université Lyon 1',
+    technologies: {
+      langages: ['Html', 'CSS', 'PHP', 'SQL'],
+      frameworks: 'CakePHP',
+      IDE: 'Visual Studio Code',
+      other: 'GitLab',
+    },
+    subject: 'Développement web',
+  },
+  // -------------------------------------------------------------------------
+  {
+    order: 2,
+    name: 'Un puissance 4 sur ESP32',
+    shortDescription:
+      'Un site web pour la gestion et une application mobile pour les joueurs',
+    description:
+      'En duo, créer un puissance 4 jouable depuis un ESP 32, jouable avec un joystick et les leds (8x8) lié au microcontrolleur, le jeu peu se faire sur un unique ESP 32 ou deux différents connéctés. Projet durant ma 1ère année de BUT informatique.',
+    productTime: 'Mai 2024',
+    pictures: [
+      { emplacement: 'img9.jpg', description: "Photograpie d'un ESP32" },
+    ],
+    madeFor: 'Université Lyon 1',
+    collaborators: ['amandinemotta'],
+    technologies: {
+      langages: 'Processing',
+      IDE: 'Arduino IDE',
+      other: 'GitLab',
+    },
+    subject: 'Programmation',
+  },
+  // -------------------------------------------------------------------------
+  {
+    order: 8,
+    name: 'Création de mon portfolio',
+    shortDescription:
+      'Un site web pour la gestion et une application mobile pour les joueurs',
+    description:
+      "Ce site a été créé dans le but de recenser toutes mes réalisations individuelles et collaboratifs, mes compétences en développement informatique. Il me permet aussi d\'alimenter à chaques nouveau projet, nouvelle compétences. Grâce à ça, les personnes succeptibles d\'être intéressé par mon profil ont accès en détail à mes acquis. Projet personnel.",
+    productTime: 'Mars 2026',
+    pictures: [
+      { emplacement: 'img10.png', description: 'Première page du site' },
+    ],
+    technologies: {
+      langages: ['Html', 'CSS', 'TypeScript'],
+      frameworks: 'Angular',
+      IDE: 'Visual Studio Code',
+      other: 'GitHub',
+    },
+    subject: 'Développement web',
+  },
+  // -------------------------------------------------------------------------
+  {
+    order: 1,
+    name: "Création d'un nonogramme",
+    shortDescription:
+      'Une application pour apprendre à maitriser les bases du développement',
+    description:
+      "En équipe de 3, l'objectif de ce projet est de créer un jeu de nonogramme. Ce jeu de réflexion basé sur la logique, se joue sur une grille où chaque ligne et colonne est accompagnée d'indices numériques indiquant la répartition des cases à noircir ou colorier. L'application finale contient 3 modes : jouer sur des images en noir et blanc, jouer sur des images en couleur ou alors créer un dessin sur lequel on peut ensuite jouer. Projet durant ma 1ère année de BUT informatique.",
+    productTime: 'Janvier 2024',
+    pictures: [
+      { emplacement: 'img11.png', description: 'Vision du gameplay' },
+      {
+        emplacement: 'img12.png',
+        description: 'Vision du gameplay de la version en couleur',
+      },
+    ],
+    madeFor: 'Université Lyon 1',
+    collaborators: ['leabarnezet', 'amandinemotta'],
+    technologies: {
+      langages: 'Processing',
+      IDE: 'Processing IDE',
+      other: 'GitLab',
+    },
+    subject: 'Programmation',
+  },
+  // -------------------------------------------------------------------------
+  {
+    order: 0,
+    name: "Reconstruction d\'un site web",
+    shortDescription: "Revue d'un site d'un club de badminton",
+    description:
+      "En duo, recréer un site web existant, étudié les évolutions possibles du site pour l\'améliorer. Projet durant ma 1ère année de BUT informatique.",
+    productTime: 'Décembre 2023 - Janvier 2024',
+    pictures: [
+      { emplacement: 'img13.jpg', description: 'Première page du site' },
+      { emplacement: 'img14.jpg', description: 'Page du site' },
+      { emplacement: 'img15.jpg', description: 'Page du site' },
+    ],
+    madeFor: 'Université Lyon 1',
+    technologies: {
+      langages: ['Html', 'CSS'],
+      IDE: 'Visual Studio Code',
+      other: ['GitLab', 'Canva'],
+    },
+    subject: 'Développement web',
+  },
+  // -------------------------------------------------------------------------
+  {
+    order: 7,
+    name: "Entretien d'un site web",
+    shortDescription: 'Entretenir le site web des Estivales de Brou',
+    description:
+      "Ce site a été créé dans le but de recenser toutes mes réalisations individuelles et collaboratifs, mes compétences en développement informatique. Il me permet aussi d\'alimenter à chaques nouveau projet, nouvelle compétences. Grâce à ça, les personnes succeptibles d\'être intéressé par mon profil ont accès en détail à mes acquis. Projet personnel.",
+    productTime: 'Septembre 2025 - Mars 2026',
+    pictures: [
+      { emplacement: 'img16.png', description: 'Première page du site' },
+    ],
+    collaborators: ['anaskadar', 'leabarnezet', 'thomasperrin'],
+    technologies: {
+      langages: ['Html', 'CSS', 'TypeScript'],
+      frameworks: 'Next.js',
+      IDE: 'Visual Studio Code',
+      other: ['GitLab', 'Docker', 'phpMyAdmin', 'Trello', 'mailhog'],
+    },
+    subject: 'Développement web',
+    link: 'https://estivalesdebrou.fr',
+  },
+
+  // -------------------------------------------------------------------------
+  {
+    order: 6,
+    name: "Implémentation d'un système d'inventaire",
+    shortDescription: 'Entretenir le site web des Estivales de Brou',
+    description:
+      'Projet réalisé seule en 2 mois lors de mon stage de 2ᵉ année de BUT : développement d’un outil pour le Greta de l’Ain permettant de centraliser la gestion de son parc informatique (gestion des équipements, système de prêts et gestion d’images système).',
+    productTime: 'Septembre 2025 - Mars 2026',
+    pictures: [
+      {
+        emplacement: 'img19.png',
+        description:
+          'Modale d\'ajout de prêt catégorie "Prêts", vue d\'un administrateur',
+      },
+      {
+        emplacement: 'img17.png',
+        description: "Page de gestion des prêts, vue d'un utilisateur",
+      },
+      {
+        emplacement: 'img18.png',
+        description:
+          'Modale affichant les détails d\'un prêt catégorie "emprunteur", vue d\'un utilisateur',
+      },
+    ],
+    madeFor: "Greta de l'Ain",
+    technologies: {
+      langages: ['Html', 'CSS', 'JavaScript', 'PHP'],
+      IDE: 'Visual Studio Code',
+      other: [
+        'phpMyAdmin',
+        'Navicat',
+        'Wamp',
+        'Bitvise',
+        'Fog Project',
+        'MariaDB',
+      ],
+    },
+    subject: 'Développement web',
+  },
+];

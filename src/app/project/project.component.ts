@@ -12,6 +12,6 @@ export class ProjectComponent {
 
   constructor() {
     if (this.project !== undefined)
-      this.haveImages = this.project.images.length > 0;
+      this.haveImages = this.project.pictures.length > 0;
   }
 }

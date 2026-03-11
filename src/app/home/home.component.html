@@ -40,8 +40,8 @@
                 }}</small>
                 <div class="container-fluid mt-auto p-0 d-flex flex-wrap gap-2">
                   <!-- LANGAGES -->
-                  @if (this.isArray(project.langages)) {
-                    @for (langage of project.langages; track langage) {
+                  @if (this.isArray(project.langage)) {
+                    @for (langage of project.langage; track langage) {
                       <button
                         type="button"
                         class="btn btn-secondary btn-sm"
@@ -51,19 +51,19 @@
                         {{ langage }}
                       </button>
                     }
-                  } @else if (project.langages) {
+                  } @else if (project.langage) {
                     <button
                       type="button"
                       class="btn btn-secondary btn-sm"
                       disabled
                       style="opacity: 70%; width: fit-content"
                     >
-                      {{ project.langages }}
+                      {{ project.langage }}
                     </button>
                   }
                   <!-- FRAMEWORKS -->
-                  @if (isArray(project.frameworks)) {
-                    @for (framework of project.frameworks; track framework) {
+                  @if (isArray(project.framework)) {
+                    @for (framework of project.framework; track framework) {
                       <button
                         type="button"
                         class="btn btn-info btn-sm"
@@ -73,14 +73,14 @@
                         {{ framework }}
                       </button>
                     }
-                  } @else if (project.frameworks) {
+                  } @else if (project.framework) {
                     <button
                       type="button"
                       class="btn btn-info btn-sm"
                       disabled
                       style="opacity: 70%; width: fit-content"
                     >
-                      {{ project.frameworks }}
+                      {{ project.framework }}
                     </button>
                   }
                 </div>

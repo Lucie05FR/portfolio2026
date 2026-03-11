@@ -1,0 +1,30 @@
+<div class="container py-4">
+  <h3 class="text-center mb-5">Technologies & Outils</h3>
+
+  @for (section of this.sections; track section.category) {
+    <div class="mb-5">
+      <h5 class="text-info mb-3">
+        <i class="bi bi-{{ section.icon }} text-info"></i> {{ section.label }}
+      </h5>
+
+      <div class="d-flex flex-wrap gap-2">
+        @for (entry of getEntries(section.category); track entry.key) {
+          <div class="border rounded p-2 d-flex align-items-center gap-2">
+            @if (entry.tech.icon || section.label === "IDE") {
+              <i
+                class="bi bi-{{
+                  entry.tech.icon
+                    ? entry.tech.icon
+                    : section.label === 'IDE'
+                      ? section.icon
+                      : ''
+                }}"
+              ></i>
+            }
+            <span class="text-center">{{ entry.tech.title }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

@@ -2,12 +2,13 @@ import { clientType } from './client.type';
 import { CollaboratorKey } from './collaborators.model';
 import { Picture } from './picture.model';
 import {
-  frameworkType,
-  IDEType,
-  langageType,
-  otherType,
-  subjectType,
-} from './technologies.type';
+  FrameworkKey,
+  IDEKey,
+  LangageKey,
+  OtherKey,
+  SoftwareKey,
+  SubjectKey,
+} from './technologies.model';
 
 export interface ProjectModel {
   order: number;
@@ -19,10 +20,11 @@ export interface ProjectModel {
   pictures?: Picture[];
   madeFor?: clientType;
   collaborators?: CollaboratorKey[] | CollaboratorKey;
-  langages?: langageType | langageType[];
-  frameworks?: frameworkType | frameworkType[];
-  IDE?: IDEType;
-  other?: otherType | otherType[];
-  subject?: subjectType[] | subjectType;
+  subject?: SubjectKey | SubjectKey[];
   link?: string | string[];
+  langage?: LangageKey | LangageKey[];
+  framework?: FrameworkKey | FrameworkKey[];
+  IDE?: IDEKey | IDEKey[];
+  software?: SoftwareKey | SoftwareKey[];
+  other?: OtherKey | OtherKey[];
 }

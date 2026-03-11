@@ -7,9 +7,18 @@
             {{ project.name }}
           </h3>
           <div class="d-flex justify-content-center gap-2 mb-4">
-            @for (other of toArray(project.subject); track other) {
+            @for (subject of toArray(project.subject); track subject) {
               <a href="#" class="text-decoration-none">
-                <div class="border rounded px-2 py-1 small">{{ other }}</div>
+                <div
+                  class="border rounded px-2 py-1 small d-flex align-items-center gap-1"
+                >
+                  @if (getTechno("subject", subject).icon) {
+                    <i
+                      class="bi bi-{{ getTechno('subject', subject).icon }}"
+                    ></i>
+                  }
+                  {{ getTechno("subject", subject).title }}
+                </div>
               </a>
             }
           </div>
@@ -31,9 +40,10 @@
 
           <!-- TECHNOLOGIES -->
           @if (
-            project.langages ||
+            project.langage ||
             project.IDE ||
-            project.frameworks ||
+            project.framework ||
+            project.software ||
             project.other
           ) {
             <h5 class="text-info mt-4">
@@ -42,97 +52,41 @@
             </h5>
 
             <div class="d-flex flex-wrap gap-2">
-              @if (project.langages) {
-                <div class="border p-3 rounded">
-                  <h6>
-                    <i class="bi bi-code-slash"></i> Langage{{
-                      isArray(project.langages) && project.langages.length > 1
-                        ? "s"
-                        : ""
-                    }}
-                  </h6>
-                  <div class="d-flex flex-wrap gap-1">
-                    @for (langage of toArray(project.langages); track langage) {
-                      <button
-                        type="button"
-                        class="btn btn-secondary btn-sm"
-                        disabled
-                      >
-                        {{ langage }}
-                      </button>
-                    }
+              @for (section of sections; track section.category) {
+                @if (project[section.category]) {
+                  <div class="border p-3 rounded">
+                    <h6>
+                      <i class="bi bi-{{ section.icon }}"></i> {{ section.label
+                      }}{{
+                        isArray(project[section.category]) &&
+                        project[section.category]
+                          ? "s"
+                          : ""
+                      }}
+                    </h6>
+                    <div class="d-flex flex-wrap gap-1">
+                      @for (
+                        key of toArray(project[section.category]);
+                        track key
+                      ) {
+                        <button
+                          type="button"
+                          class="btn btn-secondary btn-sm"
+                          disabled
+                        >
+                          @if (getTechno(section.category, key).icon) {
+                            <i
+                              class="bi bi-{{
+                                getTechno(section.category, key).icon
+                              }}"
+                            ></i>
+                          }
+                          {{ getTechno(section.category, key).title }}
+                        </button>
+                      }
+                    </div>
                   </div>
-                </div>
-              }
-
-              @if (project.frameworks) {
-                <div class="border p-3 rounded">
-                  <h6>
-                    <i class="bi bi-box"></i> Framework{{
-                      isArray(project.frameworks) &&
-                      project.frameworks.length > 1
-                        ? "s"
-                        : ""
-                    }}
-                  </h6>
-                  <div class="d-flex flex-wrap gap-1">
-                    @for (
-                      framework of toArray(project.frameworks);
-                      track framework
-                    ) {
-                      <button
-                        type="button"
-                        class="btn btn-info btn-sm"
-                        disabled
-                      >
-                        {{ framework }}
-                      </button>
-                    }
-                  </div>
-                </div>
-              }
-
-              @if (project.IDE) {
-                <div class="border p-3 rounded">
-                  <h6><i class="bi bi-laptop"></i> IDE</h6>
-                  <div class="d-flex flex-wrap gap-1">
-                    @for (ide of toArray(project.IDE); track ide) {
-                      <button
-                        type="button"
-                        class="btn btn-secondary btn-sm"
-                        disabled
-                      >
-                        {{ ide }}
-                      </button>
-                    }
-                  </div>
-                </div>
-              }
-
-              @if (project.other) {
-                <div
-                  class="border p-3 rounded"
-                  style="background-color: var(--bs-secondary)"
-                >
-                  <h6>
-                    <i class="bi bi-tools"></i> Autre{{
-                      isArray(project.other) && project.other.length > 1
-                        ? "s"
-                        : ""
-                    }}
-                  </h6>
-                  <div class="d-flex flex-wrap gap-1">
-                    @for (other of toArray(project.other); track other) {
-                      <button
-                        type="button"
-                        class="btn btn-info btn-sm"
-                        disabled
-                      >
-                        {{ other }}
-                      </button>
-                    }
-                  </div>
-                </div>
+                }
               }
             </div>
           }
@@ -160,7 +114,15 @@
             <!-- COLLABORATORS -->
             @if (project.collaborators) {
               <div class="mb-3 mt-0">
-                <h6 class="text-info">Collaborateurs :</h6>
+                <h6 class="text-info">
+                  Collaborateur{{
+                    isArray(project.collaborators) &&
+                    project.collaborators.length > 1
+                      ? "s"
+                      : ""
+                  }}
+                  :
+                </h6>
                 <div class="d-flex flex-wrap gap-2">
                   @for (
                     collaborator of getCollaborators(project.collaborators);

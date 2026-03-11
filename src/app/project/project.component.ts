@@ -2,7 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProjectModel } from '../models/project.model';
 import { ProjectService } from '../services/project.service';
-import { Collaborator, CollaboratorKey, collaborators } from '../models/collaborators.model';
+import {
+  Collaborator,
+  CollaboratorKey,
+  collaborators,
+} from '../models/collaborators.model';
+import {
+  Technologie,
+  TechnologieCategory,
+  technologies,
+  TechnoSection,
+} from '../models/technologies.model';
 
 @Component({
   selector: 'app-project',
@@ -11,6 +21,7 @@ import { Collaborator, CollaboratorKey, collaborators } from '../models/collabor
 })
 export class ProjectComponent implements OnInit {
   project?: ProjectModel;
+  sections = TechnoSection;
 
   constructor(
     private route: ActivatedRoute,
@@ -41,5 +52,17 @@ export class ProjectComponent implements OnInit {
     return arr
       .map((key) => collaborators[key as CollaboratorKey])
       .filter(Boolean);
+  }
+
+  getTechno(category: TechnologieCategory, key: string): Technologie {
+    return (
+      (technologies[category] as Record<string, Technologie>)[key] ?? {
+        title: key,
+      }
+    );
+  }
+
+  getProjectTechno(category: string): string | string[] | undefined {
+    return (this.project as any)[category];
   }
 }

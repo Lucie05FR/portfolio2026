@@ -2,7 +2,7 @@
   <div
     class="card col h-100"
     style="cursor: pointer"
-    [routerLink]="['/projects', this.project.order]"
+    [routerLink]="['/project', this.project.order]"
   >
     <div class="row g-0 h-100">
       @if (this.project.pictures && this.project.pictures.length > 0) {
@@ -46,7 +46,7 @@
             } @else if (this.project.langage) {
               <button
                 type="button"
-                class="btn btn-secondary btn-sm"
+                class="btn btn-secondary btn-sm border"
                 disabled
                 style="opacity: 70%; width: fit-content"
               >

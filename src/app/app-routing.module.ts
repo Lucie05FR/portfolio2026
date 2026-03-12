@@ -8,8 +8,9 @@ import { ProjectListComponent } from './project-list/project-list.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'projects/:id', component: ProjectComponent },
+  { path: 'project/:id', component: ProjectComponent },
   { path: 'projects', component: ProjectListComponent },
+  { path: 'projects/:subject', component: ProjectListComponent },
   { path: 'technologies', component: TechnologiesComponent },
   { path: ':badPath', component: ErrorComponent },
 ];

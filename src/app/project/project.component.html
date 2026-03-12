@@ -8,7 +8,10 @@
           </h3>
           <div class="d-flex justify-content-center gap-2 mb-4">
             @for (subject of toArray(project.subject); track subject) {
-              <a href="#" class="text-decoration-none">
+              <a
+                [routerLink]="['/projects', project.subject]"
+                class="text-decoration-none"
+              >
                 <div
                   class="border rounded px-2 py-1 small d-flex align-items-center gap-1"
                 >

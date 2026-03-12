@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { ProjectService } from '../services/project.service';
 import {
+  subjects,
   subjectType,
   Technologie,
   TechnologieCategory,
   technologies,
 } from '../models/technologies.model';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-project-list',
@@ -13,12 +16,28 @@ import {
   styleUrl: './project-list.component.scss',
 })
 export class ProjectListComponent {
-  projects: any;
-
-  constructor(public projectService: ProjectService) {
-    this.projects = this.projectService.getSortedProjects();
-  }
   selectedSubject: subjectType | null = null;
+  private routeSub?: Subscription;
+
+  constructor(
+    public projectService: ProjectService,
+    private route: ActivatedRoute,
+  ) {}
+
+  ngOnInit() {
+    this.routeSub = this.route.paramMap.subscribe((params) => {
+      const subject = params.get('subject');
+      if (subject && subjects.includes(subject as subjectType)) {
+        this.selectedSubject = subject as subjectType;
+      } else {
+        this.selectedSubject = null;
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.routeSub?.unsubscribe();
+  }
 
   get filteredProjects() {
     const sorted = [...this.projectService.projects].sort(

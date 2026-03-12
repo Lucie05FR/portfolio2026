@@ -6,7 +6,7 @@
         class="btn btn-sm border {{
           selectedSubject === subject ? 'text-info' : ''
         }}"
-        (click)="selectSubject(subject)"
+        [routerLink]="['/projects', subject]"
       >
         @if (getTechno("subject", subject).icon) {
           <i
@@ -21,7 +21,7 @@
     <button
       class="btn btn-sm border"
       [class.text-info]="selectedSubject === null"
-      (click)="selectSubject(null)"
+      [routerLink]="['/projects']"
     >
       Tous
     </button>

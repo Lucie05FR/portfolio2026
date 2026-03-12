@@ -15,11 +15,9 @@ export class HomeComponent {
     return Array.isArray(element);
   }
 
-  get sortedProjects() {
-    return [...this.projectService.projects].sort((a, b) => b.order - a.order);
-  }
-
   get displayedProjects() {
-    return this.sortedProjects.slice(0, this.showAll ? undefined : 4);
+    return this.projectService
+      .getSortedProjects()
+      .slice(0, this.showAll ? undefined : 4);
   }
 }

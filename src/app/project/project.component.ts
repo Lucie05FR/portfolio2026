@@ -61,8 +61,4 @@ export class ProjectComponent implements OnInit {
       }
     );
   }
-
-  getProjectTechno(category: string): string | string[] | undefined {
-    return (this.project as any)[category];
-  }
 }

@@ -1,64 +1,15 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-// $primary:   #6366f1;
-// $secondary: #06b6d4;
-
-// @import "bootstrap/scss/bootstrap";
-
-// :root {
-//   /* Body */
-//   --bs-body-bg: rgb(32, 37, 28);
-//   --bs-body-color: rgb(193, 193, 193);
-
-//   /* Cards */
-//   --bs-card-bg: #d10e0e;
-//   --bs-card-border-color: #ff1212;
-
-//   /* Navbar (bg-secondary utilisé dans ton code) */
-//   --bs-secondary-bg: #006aff;
-//   --bs-secondary-rgb: red;
-
-//   /* Couleurs sémantiques */
-//   --bs-primary-bg-subtle: #b23232;
-//   --bs-secondary-bg-subtle: #1a1f27;
-
-//   /* Texte */
-//   --bs-secondary-color: #787878ba;
-
-//   /* Borders globales */
-//   --bs-border-color: #368ae9;
-//   --bs-border-color-translucent: rgba(126, 166, 78, 0.276); // BORDER CARD
-
-// }
-
-// Variables Sass AVANT l'import
-// $primary: rgb(184, 226, 133);
-// $secondary: rgba(83, 131, 24, 0.15);
-
-// @import "bootstrap/scss/bootstrap";
-// @import "bootstrap-icons/font/bootstrap-icons.css";
-
-// // Variables CSS APRÈS
-// :root {
-//   --bs-body-bg: rgb(32, 37, 28);
-//   --bs-body-color: rgb(193, 193, 193);
-//   --bs-card-bg: #1e231a;
-//   --bs-card-border-color: rgba(255, 0, 0, 0.276);
-//   --bs-secondary-color: #787878;
-//   --bs-border-color: #30363d;
-//   --bs-border-color-translucent: var(--primary); // BORDER CARD
-// }
-
-$primary: rgb(184, 226, 133);
-$secondary: rgba(83, 131, 24, 0.15);
-$info: rgba(126, 166, 78, 0.276);
-$light: rgb(188, 204, 168);
+$primary: rgb(255, 0, 174);
+$secondary: #720026; // nav et effets
+$info: #ce4257; // borders
+$light: #ffa5a9; // texte
 
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
-  --bs-body-bg: rgb(32, 37, 28);
+  --bs-body-bg: #4f000b; // fond
   --bs-body-color: rgb(193, 193, 193);
   --bs-card-bg: #1e231a;
 
@@ -87,7 +38,8 @@ $light: rgb(188, 204, 168);
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  background: rgba(83, 131, 24, 0.15);
+  background: #{$info};
+  opacity: 20%;
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9999;
@@ -98,5 +50,5 @@ $light: rgb(188, 204, 168);
 
 .cursor-bubble.clicked {
   transform: translate(-50%, -50%) scale(1.3);
-  opacity: 0.5;
+  opacity: 10%;
 }

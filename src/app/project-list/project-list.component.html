@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <h3 class="h3 text-center mb-3">Mes projets</h3>
+  <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+    @for (subject of getSubjects(); track subject) {
+      <button
+        class="btn btn-sm border {{
+          selectedSubject === subject ? 'text-info' : ''
+        }}"
+        (click)="selectSubject(subject)"
+      >
+        @if (getTechno("subject", subject).icon) {
+          <i
+            class="bi bi-{{ getTechno('subject', subject).icon }} {{
+              selectedSubject === subject ? 'text-info' : ''
+            }}"
+          ></i>
+        }
+        {{ getTechno("subject", subject).title }}
+      </button>
+    }
+    <button
+      class="btn btn-sm border"
+      [class.text-info]="selectedSubject === null"
+      (click)="selectSubject(null)"
+    >
+      Tous
+    </button>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2">
+    @for (project of filteredProjects; track project) {
+      <app-project-card [project]="project" class="p-1"></app-project-card>
+    }
+  </div>
+</div>

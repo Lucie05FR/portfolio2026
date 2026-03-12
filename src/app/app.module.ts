@@ -7,6 +7,9 @@ import { ProjectComponent } from './project/project.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
+import { ProjectListComponent } from './project-list/project-list.component';
+import { RouterModule } from '@angular/router';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { TechnologiesComponent } from './technologies/technologies.component';
     ProjectComponent,
     HomeComponent,
     ErrorComponent,
-    TechnologiesComponent
+    TechnologiesComponent,
+    ProjectListComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

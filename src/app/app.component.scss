@@ -1,6 +1,36 @@
-nav {
-  background-color: var(--bs-secondary) !important;
+h5 {
+  color: var(--bs-primary);
 }
+
+::ng-deep .card:hover,
+::ng-deep button:hover {
+  transform: scale(1.03);
+  color: var(--bs-primary);
+  background-color: var(--bs-secondary);
+  transition: all 0.3s ease;
+}
+
+::ng-deep .card,
+::ng-deep button {
+  transition: all 0.3s ease;
+}
+
 .body {
   margin: 30px 100px !important;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  flex: 1;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bs-secondary) !important;
+  backdrop-filter: blur(150px);
+  -webkit-backdrop-filter: blur(10px);
 }

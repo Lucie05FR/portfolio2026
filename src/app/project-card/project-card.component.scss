@@ -1,0 +1,13 @@
+
+::ng-deep .card:hover,
+::ng-deep button:hover {
+  transform: scale(1.03);
+  color: var(--bs-primary);
+  background-color: var(--bs-secondary);
+  transition: all 0.3s ease;
+}
+
+::ng-deep .card,
+::ng-deep button {
+  transition: all 0.3s ease;
+}

@@ -2,7 +2,7 @@
   <h3 class="h3 text-center">Portfolio</h3>
   <h5>Mes projets</h5>
   <div class="row row-cols-1 row-cols-md-2">
-    @for (project of sortedProjects; track project) {
+    @for (project of displayedProjects; track project) {
       <div class="p-1">
         <div
           class="card col h-100"
@@ -90,6 +90,23 @@
         </div>
       </div>
     }
+  </div>
+  <div class="text-center mt-3">
+    <button
+      class="btn border"
+      (click)="
+        !showAll && projectService.projects.length > 4
+          ? (showAll = true)
+          : (showAll = false)
+      "
+    >
+      <i class="bi bi-grid"></i>
+      {{
+        !showAll && projectService.projects.length > 4
+          ? "Voir tous les projets (" + projectService.projects.length + ")"
+          : "Voir moins de projets"
+      }}
+    </button>
   </div>
 </div>
 <div class="text-center mt-5">

@@ -35,13 +35,18 @@
             Mes projets
           </a>
           <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#">Developpement web</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Developpement mobile</a>
-            </li>
-            <li><a class="dropdown-item" href="#">Algorithmie</a></li>
+            @for (
+              subject of this.projectService.getAvailableSubjects();
+              track subject
+            ) {
+              <li>
+                <a
+                  class="dropdown-item"
+                  [routerLink]="['/projects', subject]"
+                  >{{ getTechno("subject", subject).title }}</a
+                >
+              </li>
+            }
           </ul>
         </li>
         <li class="nav-item">

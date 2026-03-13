@@ -97,9 +97,6 @@ export const projectsDetails: ProjectModel[] = [
     description:
       "Ce site a été créé dans le but de recenser toutes mes réalisations individuelles et collaboratifs, mes compétences en développement informatique. Il me permet aussi d\'alimenter à chaques nouveau projet, nouvelle compétences. Grâce à ça, les personnes succeptibles d\'être intéressé par mon profil ont accès en détail à mes acquis. Projet personnel.",
     productTime: 'Mars 2026',
-    pictures: [
-      { emplacement: 'img10.png', description: 'Première page du site' },
-    ],
     langage: ['HTML', 'CSS', 'TypeScript'],
     framework: 'Angular',
     IDE: 'VSCode',

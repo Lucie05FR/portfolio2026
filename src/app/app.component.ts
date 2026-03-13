@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { ProjectService } from './services/project.service';
-import { ProjectModel } from './models/project.model';
+import { TechnologieCategory, technologies } from './models/technologies.model';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,12 @@ export class AppComponent {
   isClicked = false;
 
   constructor(public projectService: ProjectService) {}
+
+  getTechno(category: TechnologieCategory, key: string) {
+    return (
+      (technologies[category] as Record<string, any>)[key] ?? { title: key }
+    );
+  }
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {

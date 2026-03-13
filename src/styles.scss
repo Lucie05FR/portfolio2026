@@ -1,15 +1,15 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 $primary: rgb(255, 0, 174);
-$secondary: #720026; // nav et effets
-$info: #ce4257; // borders
-$light: #fed0bb; // texte
+$secondary: #4d062d; // nav et effets
+$info: #d1007d; // borders et titres
+$light: #ff97bf; // texte
 
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
-  --bs-body-bg: #4f000b; // fond
+  --bs-body-bg: #240219; // fond
   --bs-body-color: rgb(193, 193, 193);
   --bs-card-bg: #1e231a;
 
@@ -51,4 +51,20 @@ $light: #fed0bb; // texte
 .cursor-bubble.clicked {
   transform: translate(-50%, -50%) scale(1.3);
   opacity: 10%;
+}
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lexend:wght@100..900&family=Michroma&family=Outfit:wght@100..900&display=swap");
+
+body {
+  font-family: "Funnel Display", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap");
+h3,
+h5,
+h6 {
+  font-family: "Unbounded", sans-serif !important;
+}
+
+h5 {
+  color: var(--bs-primary);
 }

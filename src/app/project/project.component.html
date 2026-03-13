@@ -58,15 +58,23 @@
             @for (section of sections; track section.category) {
               @if (project[section.category]) {
                 <div class="border p-3 rounded">
-                  <h6>
-                    <i class="bi bi-{{ section.icon }}"></i> {{ section.label
-                    }}{{
-                      isArray(project[section.category]) &&
-                      project[section.category]
-                        ? "s"
-                        : ""
-                    }}
-                  </h6>
+                  <div class="d-flex">
+                    @if (section.icon) {
+                      <i
+                        class="bi bi-{{ section.icon }}"
+                        style="padding-right: 10px"
+                      ></i>
+                    }
+                    <p>
+                      {{ section.label
+                      }}{{
+                        isArray(project[section.category]) &&
+                        project[section.category]
+                          ? "s"
+                          : ""
+                      }}
+                    </p>
+                  </div>
                   <div class="d-flex flex-wrap gap-1">
                     @for (
                       key of toArray(project[section.category]);
@@ -116,8 +124,8 @@
 
           <!-- COLLABORATORS -->
           @if (project.collaborators) {
-            <div class="mb-3 mt-0">
-              <h6 class="text-info">
+            <div class="d-flex flex-wrap gap-2 mb-3 mt-0 align-items-center">
+              <p class="text-info m-0">
                 Collaborateur{{
                   isArray(project.collaborators) &&
                   project.collaborators.length > 1
@@ -125,29 +133,27 @@
                     : ""
                 }}
                 :
-              </h6>
-              <div class="d-flex flex-wrap gap-2">
-                @for (
-                  collaborator of getCollaborators(project.collaborators);
-                  track collaborator
-                ) {
-                  <a
-                    [href]="collaborator.linkedin || collaborator.link || '#'"
-                    target="_blank"
-                    class="text-decoration-none"
+              </p>
+              @for (
+                collaborator of getCollaborators(project.collaborators);
+                track collaborator
+              ) {
+                <a
+                  [href]="collaborator.linkedin || collaborator.link || '#'"
+                  target="_blank"
+                  class="text-decoration-none"
+                >
+                  <div
+                    class="border rounded px-3 py-2 d-flex align-items-center gap-2"
                   >
-                    <div
-                      class="border rounded px-3 py-2 d-flex align-items-center gap-2"
-                    >
-                      <i class="bi bi-person-fill text-info"></i>
-                      <span
-                        >{{ collaborator.lastName | uppercase }}
-                        {{ collaborator.firstName }}
-                      </span>
-                    </div>
-                  </a>
-                }
-              </div>
+                    <i class="bi bi-person-fill text-info"></i>
+                    <span
+                      >{{ collaborator.lastName | uppercase }}
+                      {{ collaborator.firstName }}
+                    </span>
+                  </div>
+                </a>
+              }
             </div>
           }
 

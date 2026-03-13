@@ -1,7 +1,16 @@
 <div class="container-fluid">
-  <h3 class="text-center">Portfolio</h3>
+  <h3 class="text-center py-3">RENARD Lucie</h3>
+  <p class="text-center">
+    Étudiante en <span class="text-info">BUT Informatique</span>, je me
+    spécialise dans le développement d’applications et de sites web. J’aime
+    concevoir des solutions techniques concrètes, de la conception à
+    l’implémentation. À travers mes projets académiques et personnels, j’ai
+    acquis des compétences en programmation, en développement web et en
+    conception d’applications. Je cherche continuellement à progresser et à
+    relever de nouveaux défis techniques.
+  </p>
 
-  <h5 class="text-center text-info">Mes projets</h5>
+  <h5 class="text-center text-info mt-4 mb-2">Mes projets</h5>
   <div class="row row-cols-1 row-cols-md-2">
     @for (project of displayedProjects; track project) {
       <app-project-card [project]="project" class="p-1"></app-project-card>

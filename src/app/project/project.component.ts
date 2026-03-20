@@ -15,7 +15,6 @@ import {
   TechnoSection,
 } from '../models/technologies.model';
 
-import { AfterViewInit } from '@angular/core';
 declare var bootstrap: any;
 
 @Component({
@@ -26,6 +25,7 @@ declare var bootstrap: any;
 export class ProjectComponent implements OnInit {
   project?: ProjectModel;
   sections = TechnoSection;
+  public technoIndex = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -116,5 +116,9 @@ export class ProjectComponent implements OnInit {
     };
     const modal = new bootstrap.Modal(document.getElementById('imageModal'));
     modal.show();
+  }
+
+  setTechnoIndex() {
+    this.technoIndex++;
   }
 }

@@ -1,20 +1,20 @@
-$primary: #d1007d;
-$secondary: #4d062d; // nav et effets
+$primary: #bc2f52;
+$secondary: #4d0615; // nav et effets
 $info: rgb(0, 255, 76); // borders et titres
-$light: #ff97bf; // texte
+$light: #fc8e8e; // texte
+$dark: #37030c;
 
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
-  --bs-body-bg: #240219; // fond
+  --bs-body-bg: #{$dark}; // fond
   --bs-body-color: rgb(193, 193, 193);
   --bs-card-bg: #1e231a;
 
   --bs-card-border-color: #{$primary};
   --bs-border-color-translucent: #{$primary};
   --bs-border-color: #{$primary};
-
 }
 
 * {
@@ -59,6 +59,7 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap");
 h3,
+h1,
 h5,
 h6 {
   font-family: "Unbounded", sans-serif !important;

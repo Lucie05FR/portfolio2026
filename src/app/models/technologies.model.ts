@@ -203,7 +203,7 @@ export const technologies: {
     phpMyAdmin: { title: 'phpMyAdmin', icon: 'database' },
     Navicat: { title: 'Navicat', icon: 'table' },
     Wamp: { title: 'Wamp', icon: 'server' },
-    Bitvise: { title: 'Bitvise', icon: 'shield-lock' },
+    Bitvise: { title: 'Bitvise', icon: 'cloudy-fill' },
     Mailhog: { title: 'Mailhog', icon: 'envelope' },
     MQTT: { title: 'MQTT', icon: 'wifi' },
     Fog: { title: 'Fog Project', icon: 'cloud' },

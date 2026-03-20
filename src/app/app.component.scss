@@ -5,6 +5,12 @@
   flex-direction: column;
 }
 
+@media (max-width: 768px) {
+  .body {
+    margin: 30px 20px !important;
+  }
+}
+
 ::ng-deep .img-wrapper {
   position: relative;
   overflow: hidden;

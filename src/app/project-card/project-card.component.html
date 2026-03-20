@@ -1,6 +1,6 @@
 @if (project) {
   <div
-    class="card col h-100 rounded-3"
+    class="card col h-100 rounded-4"
     style="cursor: pointer"
     [routerLink]="['/project', this.project.order]"
   >
@@ -48,6 +48,16 @@
             ) {
               <button class="btn btn-sm border rounded-3">
                 {{ getTechno("framework", framework).title }}
+              </button>
+            }
+
+            <!-- LIBRAIRIE -->
+            @for (
+              librairie of this.toArray(this.project.librairie);
+              track librairie
+            ) {
+              <button class="btn btn-sm border rounded-3">
+                {{ getTechno("librairie", librairie).title }}
               </button>
             }
           </div>

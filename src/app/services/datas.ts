@@ -5,9 +5,12 @@ export const projectsDetails: ProjectModel[] = [
   {
     order: 5,
     name: "Création d'un site de recettes",
-    shortDescription: 'Un site de recettes en PHP',
+    shortDescription:
+      'Un site de gestion de recettes de cuisine avec système de rôles et génération automatique de listes de courses.',
     description:
-      "En duo, création d'un site de permettant la gestion de recettes de cuisine avec une base de données SQL. Seul l'administrateur peut ajouter ou modifier les recettes. Pour la partie des visiteurs, il est possible de consulter l'ensemble des recettes, leurs étapes de préparation et les ingrédients nécessaires. Il est également possible de faire générer une liste de courses, celle-ci recensera tout les ingrédients nécessaires ainsi que leur quantités en fonction des recettes présentent dans la liste. Projet réalisé durant ma seconde année de BUT informatique.",
+      "Projet de développement d'un site de recettes multi-profils : visiteurs, utilisateurs connectés et administrateur. Chaque profil dispose de fonctionnalités adaptées, navigation libre pour les visiteurs, création de listes de courses personnalisées pour les membres, et gestion complète du catalogue pour l'administrateur.",
+    details:
+      "L'objectif principal était de transformer dynamiquement une sélection de recettes en liste de courses exploitable, tout en proposant une interface de gestion intuitive du contenu culinaire, recettes, ingrédients, étapes et images.",
     productTime: 'Février 2025 - Avril 2025',
     pictures: [
       { emplacement: 'img1.jpg', description: 'Première page du site' },
@@ -29,11 +32,11 @@ export const projectsDetails: ProjectModel[] = [
     order: 4,
     name: "Création d'un site de jeu de piste",
     shortDescription:
-      'Un site web pour la gestion et une application mobile pour les joueurs',
+      "Application mobile de jeu de piste pour les nouveaux étudiants, accompagnée d'un site web de gestion pour les organisateurs.",
     description:
-      "Le projet consiste à créer une application mobile qui est destinée à de nouveaux élèves afin qu\'ils puissent visiter les bâtiments de  l\'université de manière amusante. <br> A côté de ça, un site web est accessible pour la personne qui sera en charge de préparer le jeu. Ce site a pour but de gérer le jeu de piste avant qu\'il ne soit jouable pour les élèves. Cette organisation consiste à s\'occuper de créer les énigmes, les paramètres de la partie et les lieux à visiter.",
+      "Ce projet combine une application mobile ludique destinée aux nouveaux étudiants pour découvrir les bâtiments de l'université, et un site web de gestion permettant aux organisateurs de préparer le jeu de piste. Le site couvre la création des énigmes, la configuration des parties et la gestion des lieux à visiter.",
     details:
-      "Ce projet a sollicité 4 développeurs, nous avons décidé de faire des sous-équipes : 2 pour le back, 2 pour le front. Même si nous avons finalement tous plus ou moins touché aux deux, cela nous a permis de nous répartir plus efficacement les tâches. J\'ai principalement travaillé sur le visuel du site et de l\'application, par exemple j\'ai eu l\'occasion de beaucoup travailler sur les maquettes. Durant la création du site ou de l\'application, j\'ai travaillé sur le placement et le visuel des éléments. J\'ai aussi fait, par exemple, de faire en sorte qu\'un groupe d\'éléments ne se voient pas tous sans que l\'utilisateur ne le souhaite. J\'ai pu faire plusieurs pages qui ont pour but de regrouper un ensemble d\'éléments (des énigmes, des parties, ...) que j\'ai dû aller chercher dans la base de données. Projet de ma 2ème année de BUT informatique.",
+      "Projet réalisé en équipe de 4 développeurs, organisés en binômes front/back. Mon travail sur ce projet a principalement concerné la partie visuelle du site et de l'application : conception des maquettes, mise en page des éléments, et développement de plusieurs pages de liste récupérant dynamiquement des données depuis la base de données (énigmes, parties...). J'ai également travaillé sur la progression des joueurs et structuré la navigation entre les différentes pages.",
     productTime: 'Septembre 2024 - Mars 2025',
     pictures: [
       {
@@ -59,13 +62,14 @@ export const projectsDetails: ProjectModel[] = [
     shortDescription:
       "Un site web permettant de gérer un blog d'articles de presse",
     description:
-      "Projet visant à apprendre à maitriser le PHP. Créer un site de gestion d'un blog d'articles, gérer les abonnements des visiteurs aux blogs, la créations et la gestion d'articles pour les utilisateurs connéctés. Exercice durant ma 2ème année de BUT informatique.",
+      "Application web développée en PHP permettant la gestion complète d'un blog de presse. Les visiteurs peuvent s'abonner aux blogs de leur choix, tandis que les utilisateurs connectés disposent d'outils pour créer, modifier et administrer leurs articles. Projet réalisé en 2ème année de BUT Informatique pour approfondir la maîtrise du PHP.",
     productTime: 'Septembre 2024 - Octobre 2024',
     pictures: [
       { emplacement: 'img8.png', description: 'Première page du site' },
     ],
     madeFor: "l'université Lyon 1",
     langage: ['HTML', 'CSS', 'PHP', 'SQL'],
+    database: 'MySQL',
     IDE: 'VSCode',
     other: 'GitLab',
     subject: 'Web',
@@ -75,9 +79,9 @@ export const projectsDetails: ProjectModel[] = [
     order: 2,
     name: 'Un puissance 4 sur ESP32',
     shortDescription:
-      "Implémentation d'un puissance 4 jouable sur un ou deux ESP32 connectés",
+      "Implémentation d'un Puissance 4 sur microcontrôleur ESP32, jouable en local ou entre deux ESP32 connectés.",
     description:
-      'En duo, créer un puissance 4 jouable depuis un ESP 32, jouable avec un joystick et les leds (8x8) lié au microcontrolleur, le jeu peu se faire sur un unique ESP 32 ou deux différents connéctés. Projet durant ma 1ère année de BUT informatique.',
+      "Projet consistant à développer un Puissance 4 entièrement embarqué sur ESP32. Le jeu se joue via un joystick et s'affiche sur une matrice de LEDs 8x8 reliée au microcontrôleur. Deux modes sont disponibles : un mode local sur un seul ESP32, et un mode multijoueur entre deux ESP32 communicants. Projet réalisé en 1ère année de BUT Informatique.",
     productTime: 'Mai 2024',
     pictures: [
       { emplacement: 'img9.jpg', description: "Photograpie d'un ESP32" },
@@ -94,11 +98,13 @@ export const projectsDetails: ProjectModel[] = [
     order: 8,
     name: 'Création de mon portfolio',
     shortDescription:
-      'Un site web pour la gestion et une application mobile pour les joueurs',
+      'Portfolio personnel présentant mes projets, compétences et parcours de développeuse.',
     description:
-      "Ce site a été créé dans le but de recenser toutes mes réalisations individuelles et collaboratifs, mes compétences en développement informatique. Il me permet aussi d\'alimenter à chaques nouveau projet, nouvelle compétences. Grâce à ça, les personnes succeptibles d\'être intéressé par mon profil ont accès en détail à mes acquis. Projet personnel.",
+      "Portfolio conçu pour centraliser l'ensemble de mes réalisations et compétences en développement informatique. Régulièrement mis à jour au fil de mes projets, il permet à tout recruteur ou curieux d'explorer mon profil en détail.",
+    details:
+      "Projet personnel et évolutif, qui m'a également permis de progresser sur Angular, Bootstrap et la structuration d'une application front-end complète. Il a été pensé et conçu intelligemment pour qu'il soit pratique à entretenir.",
     productTime: 'Mars 2026',
-    langage: ['HTML', 'CSS', 'TypeScript'],
+    langage: ['HTML', 'SCSS', 'TypeScript'],
     framework: ['Angular', 'Bootstrap'],
     IDE: 'VSCode',
     other: 'GitHub',
@@ -110,9 +116,9 @@ export const projectsDetails: ProjectModel[] = [
     order: 1,
     name: "Création d'un nonogramme",
     shortDescription:
-      'Une application pour apprendre à maitriser les bases du développement',
+      'Application de jeu de nonogramme en trois modes : noir et blanc, couleur et création de grille personnalisée.',
     description:
-      "En équipe de 3, l'objectif de ce projet est de créer un jeu de nonogramme. Ce jeu de réflexion basé sur la logique, se joue sur une grille où chaque ligne et colonne est accompagnée d'indices numériques indiquant la répartition des cases à noircir ou colorier. L'application finale contient 3 modes : jouer sur des images en noir et blanc, jouer sur des images en couleur ou alors créer un dessin sur lequel on peut ensuite jouer. Projet durant ma 1ère année de BUT informatique.",
+      "Projet consistant à développer un jeu de nonogramme en Processing. Le principe : résoudre une grille en noircissant les bonnes cases à partir d'indices numériques placés sur chaque ligne et colonne. L'application propose trois modes de jeu : résolution en noir et blanc, résolution en couleur, et un mode créatif permettant de dessiner sa propre grille pour ensuite la jouer. Projet réalisé en 1ère année de BUT Informatique.",
     productTime: 'Janvier 2024',
     pictures: [
       { emplacement: 'img11.png', description: 'Vision du gameplay' },
@@ -131,9 +137,10 @@ export const projectsDetails: ProjectModel[] = [
   {
     order: 0,
     name: "Reconstruction d\'un site web",
-    shortDescription: "Revue d'un site d'un club de badminton",
+    shortDescription:
+      "Refonte complète du site web d'un club de badminton, avec analyse des améliorations possibles.",
     description:
-      "En duo, recréer un site web existant, étudié les évolutions possibles du site pour l\'améliorer. Projet durant ma 1ère année de BUT informatique.",
+      "Projet réalisé en binôme consistant à recréer et moderniser le site web existant d'un club de badminton. Au delà de la reconstruction visuelle, nous avons analysé les axes d'amélioration du site original afin de proposer une version plus claire et plus fonctionnelle. Projet réalisé en 1ère année de BUT Informatique.",
     productTime: 'Décembre 2023 - Janvier 2024',
     pictures: [
       { emplacement: 'img13.jpg', description: 'Première page du site' },
@@ -151,9 +158,12 @@ export const projectsDetails: ProjectModel[] = [
   {
     order: 7,
     name: "Entretien d'un site web",
-    shortDescription: 'Entretenir le site web des Estivales de Brou',
+    shortDescription:
+      "Maintenance et évolution du site web de l'association des Estivales de Brou.",
     description:
-      "Ce site a été créé dans le but de recenser toutes mes réalisations individuelles et collaboratifs, mes compétences en développement informatique. Il me permet aussi d\'alimenter à chaques nouveau projet, nouvelle compétences. Grâce à ça, les personnes succeptibles d\'être intéressé par mon profil ont accès en détail à mes acquis. Projet personnel.",
+      "Mission de maintenance et d'amélioration du site web de l'Association des Soirées Estivales de Brou, une association culturelle franco-suisse produisant des spectacles lyriques et soutenant les jeunes artistes professionnels. Le travail consistait à assurer la mise à jour des frameworks, la maintenance technique du site existant et l'ajout de nouvelles fonctionnalités au backoffice.",
+    details:
+      "J'ai principalement contribué à la conception et au développement de l'espace choriste, une section entièrement nouvelle du site dédiée aux participants de l'Atelier Vocal Départemental. Projet réalisé en 3ème année de BUT Informatique en alternance.",
     productTime: 'Septembre 2025 - Mars 2026',
     pictures: [
       {
@@ -175,12 +185,14 @@ export const projectsDetails: ProjectModel[] = [
   // -------------------------------------------------------------------------
   {
     order: 6,
-    name: "Implémentation d'un système d'inventaire",
+    name: "Implémentation d'un système d'inventaire, gestion d'un parc informatique",
     shortDescription:
-      "Ajout d'un inventaire à une architechture déjà mise en place",
+      "Développement d'un outil de gestion du parc informatique pour le Greta de l'Ain, intégré à une architecture existante.",
     description:
-      'Projet réalisé seule en 2 mois lors de mon stage de 2ᵉ année de BUT : développement d’un outil pour le Greta de l’Ain permettant de centraliser la gestion de son parc informatique (gestion des équipements, système de prêts et gestion d’images système).',
-    productTime: 'Septembre 2025 - Mars 2026',
+      "Projet réalisé seule durant mon stage de 2ème année de BUT au Greta de l'Ain. L'objectif était de centraliser la gestion du parc informatique des 5 sites de l'établissement : recensement des équipements, système de prêts et gestion des images système. L'outil s'intègre à l'architecture existante en exploitant la base de données de Fog Project.",
+    details:
+      "J'ai conçu et développé une base de données sous phpMyAdmin pour gérer le matériel, les images système et les prêts d'équipements. Ce projet m'a permis de travailler en autonomie complète sur l'ensemble du cycle de développement, de la conception de la base de données à l'implémentation de l'interface de gestion.",
+    productTime: 'Avril 2025 - Juin 2025',
     pictures: [
       {
         emplacement: 'img20.png',
@@ -211,13 +223,14 @@ export const projectsDetails: ProjectModel[] = [
   },
   // -------------------------------------------------------------------------
   {
-    order: 9,
+    order: 10,
     name: 'Regroupement de simulateurs',
     shortDescription:
-      'Un site web pour la gestion et une application mobile pour les joueurs',
+      "Développement d'une interface centralisée regroupant les simulateurs internes de Scantech pour faciliter les tests et démonstrations.",
     description:
-      'Développement en binôme d’un outils regroupant les simulateurs existant de l’entreprise. Projet réalisé durant mon alternance (septembre 2025 à aout 2026), je me suis concentré sur le front du projet, j’ai utilisé la librairie de l’entreprise et voila voila',
-    details: 'A',
+      "Scantech est une entreprise spécialisée dans l'industrie des scanners industriels. Ses développeurs ont conçu plusieurs simulateurs utilisés en interne pour des tests et pourraient être utilisés lors de démonstrations auprès de clients. L'objectif de ce projet est de regrouper ces simulateurs au sein d'un outil central unifié, facilitant leur accès et leur utilisation au quotidien.",
+    details:
+      "Projet faisant l'objet de mon alternance chez Scantech, de ma dernière année de BUT. Je suis concentrée principalement sur la partie front-end, en utilisant la librairie interne de l'entreprise. Une expérience enrichissante qui me permet de m'adapter à un contexte professionnel réel, avec des contraintes techniques et des standards de code propres à l'entreprise.",
     productTime: 'Septembre 2025 - Aout 2026',
     pictures: [
       {
@@ -237,15 +250,41 @@ export const projectsDetails: ProjectModel[] = [
 
   // -------------------------------------------------------------------------
   {
-    order: 999,
-    name: 'TEST',
-    shortDescription: 'desc',
-    description: 'desc2',
-    productTime: 'temps',
-    langage: ['HTML', 'CSS', 'JavaScript', 'PHP'],
-    IDE: 'VSCode',
-    database: 'MariaDB',
-    other: ['phpMyAdmin', 'Navicat', 'Wamp', 'Bitvise', 'Fog'],
+    order: 9,
+    name: 'Mini monde Mario',
+    shortDescription:
+      "Mini jeu 3D inspiré de l'univers Mario, développé avec Three.js et navigable à la première personne.",
+    description:
+      "Projet de développement d'un mini monde 3D inspiré de l'univers Mario, entièrement réalisé avec Three.js. Le joueur évolue à la première personne dans un environnement interactif : déplacements au clavier et à la souris, sauts, collecte de pièces et récupération d'étoile. Le monde propose également un cycle jour/nuit activable à la demande.",
+    details:
+      "L'objectif était de prendre en main Three.js et les bases de la 3D dans un contexte web. Le projet intègre la gestion des collisions, des déplacements en première personne, un système de score et des effets d'éclairage pour le changement de temporalité. Tous les objets 3D ont été récupérés depuis sketchfab.com.",
+    productTime: '8h',
+    pictures: [
+      {
+        emplacement: 'img5.png',
+        description: 'Image du gameplay près du chateau',
+      },
+      {
+        emplacement: 'img10.png',
+        description: 'Image du gameplay game over',
+      },
+      {
+        emplacement: 'img24.png',
+        description: 'Image du gameplay pièce',
+      },
+      {
+        emplacement: 'img25.png',
+        description: 'Image du gameplay partie gagné',
+      },
+      {
+        emplacement: 'img26.png',
+        description: 'Image du gameplay mode nuit',
+      },
+    ],
+    madeFor: "l'université Lyon 1",
+    langage: ['HTML', 'CSS', 'JavaScript'],
+    librairie: 'ThreeJs',
+    IDE: 'PHPStorm',
     subject: 'Web',
   },
 ];

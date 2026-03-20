@@ -10,7 +10,9 @@
 
       <div class="d-flex flex-wrap gap-2">
         @for (entry of getEntries(section.category); track entry.key) {
-          <div class="border rounded-3 bg-secondary py-1 px-2  d-flex align-items-center gap-2">
+          <div
+            class="rounded-3 bg-secondary py-1 px-2 d-flex align-items-center gap-2"
+          >
             @if (entry.tech.icon || section.label === "IDE") {
               <i
                 class="bi bi-{{

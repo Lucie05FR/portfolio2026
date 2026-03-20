@@ -41,32 +41,32 @@ export class AboutComponent {
   public timeline: elementInterface[] = [
     {
       date: '2023',
-      title: 'Baccalauréat général',
+      title: 'Baccalauréat Général',
       description:
-        'Lycée Saint-Exupéry, Valserhône. Spécialités mathématiques et informatique',
+        'Lycée Saint-Exupéry, Valserhône - Spécialités Mathématiques et Numérique & Sciences Informatiques (NSI)',
       icon: 'mortarboard',
     },
     {
       date: '2023 - 2026',
       title: 'BUT Informatique',
       description:
-        "Parcours réalisation d'applications à l'université Lyon 1 Claude Bernard site de Bourg-en-Bresse",
+        "Parcours Réalisation d'Applications : conception, développement et validation - IUT Claude Bernard Lyon 1, site de Bourg-en-Bresse",
       icon: 'laptop',
     },
     {
       date: 'Avril - Juin 2025',
-      title: 'Stage',
+      title: "Stage - Greta CFA de l'Ain",
       description:
-        "Effectué durant ma deuxième année de mon BUT, au service informatique du Greta CFA de l'Ain",
+        'Mission au sein du service informatique dans le cadre de ma 2ème année de BUT',
       icon: 'briefcase',
       project: 6,
     },
     {
       date: '2025 - 2026',
-      title: 'Alternance',
-      description: 'Effectué durant ma troisième année de mon BUT, à Scantech',
+      title: 'Alternance - Scantech',
+      description: "Contrat d'apprentissage réalisé en 3ème année de BUT",
       icon: 'building',
-      project: 9,
+      project: 10,
     },
   ];
 

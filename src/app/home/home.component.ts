@@ -7,8 +7,6 @@ import { ProjectService } from '../services/project.service';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  showAll = false;
-
   constructor(public projectService: ProjectService) {}
 
   isArray(element: any): boolean {
@@ -16,8 +14,6 @@ export class HomeComponent {
   }
 
   get displayedProjects() {
-    return this.projectService
-      .getSortedProjects()
-      .slice(0, this.showAll ? undefined : 4);
+    return this.projectService.getSortedProjects().slice(0, 4);
   }
 }

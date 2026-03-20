@@ -1,28 +1,25 @@
-<div class="container-fluid">
-  <h3 class="text-center py-3">RENARD Lucie</h3>
-  <p class="text-center">
-    Étudiante en <span class="text-primary">BUT Informatique</span>, je me
-    spécialise dans le développement d’applications et de sites web. J’aime
-    concevoir des solutions techniques concrètes, de la conception à
-    l’implémentation. À travers mes projets académiques et personnels, j’ai
-    acquis des compétences en programmation, en développement web et en
-    conception d’applications. Je cherche continuellement à progresser et à
-    relever de nouveaux défis techniques.
-  </p>
+<div class="container py-5">
+  <section class="text-center mb-5">
+    <h1 class="fw-bold">Renard Lucie</h1>
+    <p class="text-primary fs-5 mb-3">Développeuse web & mobile</p>
+    <p class="mx-auto" style="max-width: 800px">
+      Étudiante en BUT Informatique, je conçois des applications web et mobiles
+      avec soin, du design à l'implémentation. Je cherche à relever de nouveaux
+      défis techniques.
+    </p>
+  </section>
 
-  <h5 class="text-center text-primary mt-4 mb-2">Mes derniers projets</h5>
-  <div class="row row-cols-1 row-cols-md-2">
-    @for (project of displayedProjects; track project) {
-      <app-project-card [project]="project" class="p-1"></app-project-card>
-    }
-  </div>
-  <div class="text-center mt-3">
-    <button
-      class="btn btn-outline-secondary border rounded-3"
-      [routerLink]="['projects']"
-    >
-      <i class="bi bi-grid"></i>
-      Voir tous les projets
-    </button>
-  </div>
+  <section>
+    <h5 class="text-primary text-center mb-3">Mes derniers projets</h5>
+    <div class="row row-cols-1 row-cols-md-2">
+      @for (project of displayedProjects; track project) {
+        <app-project-card [project]="project" class="p-1"></app-project-card>
+      }
+    </div>
+    <div class="text-center mt-4">
+      <a routerLink="/projects" class="btn btn-secondary border rounded-3">
+        <i class="bi bi-grid me-2"></i>Tous les projets
+      </a>
+    </div>
+  </section>
 </div>

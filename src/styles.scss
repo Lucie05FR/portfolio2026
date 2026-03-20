@@ -1,8 +1,6 @@
-@import "bootstrap-icons/font/bootstrap-icons.css";
-
-$primary: rgb(255, 0, 174);
+$primary: #d1007d;
 $secondary: #4d062d; // nav et effets
-$info: #d1007d; // borders et titres
+$info: rgb(0, 255, 76); // borders et titres
 $light: #ff97bf; // texte
 
 @import "bootstrap/scss/bootstrap";
@@ -13,9 +11,10 @@ $light: #ff97bf; // texte
   --bs-body-color: rgb(193, 193, 193);
   --bs-card-bg: #1e231a;
 
-  --bs-card-border-color: #{$info};
-  --bs-border-color-translucent: #{$info};
-  --bs-border-color: #{$info};
+  --bs-card-border-color: #{$primary};
+  --bs-border-color-translucent: #{$primary};
+  --bs-border-color: #{$primary};
+
 }
 
 * {
@@ -27,7 +26,7 @@ $light: #ff97bf; // texte
 }
 .dropdown-item:hover,
 .dropdown-item:focus {
-  background-color: #{$info};
+  background-color: #{$secondary};
   color: #{$light};
   transition: all 0.5s ease;
 }
@@ -38,7 +37,7 @@ $light: #ff97bf; // texte
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  background: #{$info};
+  background: #{$primary};
   opacity: 20%;
   pointer-events: none;
   transform: translate(-50%, -50%);

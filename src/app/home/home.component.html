@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h3 class="text-center py-3">RENARD Lucie</h3>
   <p class="text-center">
-    Étudiante en <span class="text-info">BUT Informatique</span>, je me
+    Étudiante en <span class="text-primary">BUT Informatique</span>, je me
     spécialise dans le développement d’applications et de sites web. J’aime
     concevoir des solutions techniques concrètes, de la conception à
     l’implémentation. À travers mes projets académiques et personnels, j’ai
@@ -10,7 +10,7 @@
     relever de nouveaux défis techniques.
   </p>
 
-  <h5 class="text-center text-info mt-4 mb-2">Mes projets</h5>
+  <h5 class="text-center text-primary mt-4 mb-2">Mes derniers projets</h5>
   <div class="row row-cols-1 row-cols-md-2">
     @for (project of displayedProjects; track project) {
       <app-project-card [project]="project" class="p-1"></app-project-card>
@@ -18,25 +18,11 @@
   </div>
   <div class="text-center mt-3">
     <button
-      class="btn border"
+      class="btn btn-outline-secondary border rounded-3"
       [routerLink]="['projects']"
-      (click)="
-        !showAll && projectService.projects.length > 4
-          ? (showAll = true)
-          : (showAll = false)
-      "
     >
       <i class="bi bi-grid"></i>
-      {{
-        !showAll && projectService.projects.length > 4
-          ? "Voir tous les projets (" + projectService.projects.length + ")"
-          : "Voir moins de projets"
-      }}
+      Voir tous les projets
     </button>
   </div>
-</div>
-<div class="text-center mt-5">
-  <a href="#" class="btn btn-link text-center text-info"
-    >Revenir en haut de la page</a
-  >
 </div>

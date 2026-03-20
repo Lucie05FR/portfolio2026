@@ -21,7 +21,7 @@ export const collaborators: Record<CollaboratorKey, Collaborator> = {
     lastName: 'Barnezet',
     email: 'leabarnezet@gmail.com',
     linkedin: 'https://www.linkedin.com/in/léa-barnezet-333aa8267/',
-    link: 'https://siteportfolio-production-c26a.up.railway.app',
+    link: 'https://siteportfolioleabarnezet.up.railway.app',
   },
   mathisrodier: {
     firstName: 'Mathis',

@@ -16,8 +16,6 @@ export const langages = [
   'SQL',
   'JavaScript',
   'XML',
-  'Neo4j',
-  'MongoDB',
   'TypeScript',
 ] as const;
 export type langageType = (typeof langages)[number];
@@ -30,21 +28,33 @@ export const frameworks = [
   'React',
   'VueJs',
   'NextJs',
+  'Bootstrap',
+  'TailwindCSS',
 ] as const;
 export type frameworkType = (typeof frameworks)[number];
+
+export const librairies = ['ThreeJs'] as const;
+export type librairieType = (typeof librairies)[number];
 
 export const IDE = [
   'VSCode',
   'IntelliJ',
-  'MySQL',
   'AndroidStudio',
   'QtCreator',
   'ArduinoIDE',
   'Spyder',
   'PHPStorm',
-  'SQLite',
 ] as const;
 export type IDEType = (typeof IDE)[number];
+
+export const databases = [
+  'MySQL',
+  'SQLite',
+  'MongoDB',
+  'Neo4j',
+  'MariaDB',
+] as const;
+export type databaseType = (typeof databases)[number];
 
 export const softwares = [
   'Canva',
@@ -59,12 +69,11 @@ export type softwareType = (typeof softwares)[number];
 export const other = [
   'GitHub',
   'GitLab',
-  'Firebase',
   'Bruno',
   'Postman',
   'phpMyAdmin',
-  'MariaDB',
   'Navicat',
+  'Firebase',
   'MQTT',
   'Wamp',
   'Bitvise',
@@ -81,7 +90,9 @@ export type subjectType = (typeof subjects)[number];
 export type TechnologieCategory =
   | 'langage'
   | 'framework'
+  | 'librairie'
   | 'IDE'
+  | 'database'
   | 'software'
   | 'other'
   | 'subject';
@@ -103,7 +114,9 @@ export const TechnoSection: TechnoSection[] = [
     label: 'Framework',
     icon: 'stack',
   },
+  { category: 'librairie', label: 'Librairie', icon: 'box' },
   { category: 'IDE', label: 'IDE', icon: 'window-sidebar' },
+  { category: 'database', label: 'Database', icon: 'database-fill' },
   {
     category: 'software',
     label: 'Logiciel',
@@ -115,7 +128,9 @@ export const TechnoSection: TechnoSection[] = [
 export const technologies: {
   langage: Record<langageType, Technologie>;
   framework: Record<frameworkType, Technologie>;
+  librairie: Record<librairieType, Technologie>;
   IDE: Record<IDEType, Technologie>;
+  database: Record<databaseType, Technologie>;
   software: Record<softwareType, Technologie>;
   other: Record<otherType, Technologie>;
   subject: Record<subjectType, Technologie>;
@@ -134,8 +149,6 @@ export const technologies: {
     Dart: { title: 'Dart' },
     Processing: { title: 'Processing' },
     XML: { title: 'XML', icon: 'filetype-xml' },
-    Neo4j: { title: 'Neo4j', icon: 'diagram-3' },
-    MongoDB: { title: 'MongoDB', icon: 'database' },
   },
 
   framework: {
@@ -146,6 +159,12 @@ export const technologies: {
     React: { title: 'React', icon: 'circle' },
     VueJs: { title: 'Vue.js', icon: 'triangle' },
     NextJs: { title: 'Next.js', icon: 'forward' },
+    Bootstrap: { title: 'Bootstrap', icon: 'bootstrap' },
+    TailwindCSS: { title: 'Tailwind CSS', icon: 'palette2' },
+  },
+
+  librairie: {
+    ThreeJs: { title: 'Three.js', icon: 'triangle' },
   },
 
   IDE: {
@@ -156,8 +175,6 @@ export const technologies: {
     QtCreator: { title: 'Qt Creator' },
     ArduinoIDE: { title: 'Arduino IDE', icon: 'cpu' },
     Spyder: { title: 'Spyder', icon: 'bug' },
-    MySQL: { title: 'MySQL Workbench', icon: 'database' },
-    SQLite: { title: 'SQLite', icon: 'database-fill' },
   },
 
   software: {
@@ -168,15 +185,22 @@ export const technologies: {
     Jira: { title: 'Jira', icon: 'kanban' },
   },
 
+  database: {
+    MySQL: { title: 'MySQL Workbench', icon: 'database' },
+    SQLite: { title: 'SQLite', icon: 'database-fill' },
+    MariaDB: { title: 'MariaDB', icon: 'database-fill' },
+    Neo4j: { title: 'Neo4j', icon: 'diagram-3' },
+    MongoDB: { title: 'MongoDB', icon: 'database' },
+  },
+
   other: {
     GitHub: { title: 'GitHub', icon: 'github' },
     GitLab: { title: 'GitLab', icon: 'git' },
-    Firebase: { title: 'Firebase', icon: 'fire' },
     Docker: { title: 'Docker', icon: 'box-seam' },
+    Firebase: { title: 'Firebase', icon: 'fire' },
     Postman: { title: 'Postman', icon: 'send' },
     Bruno: { title: 'Bruno', icon: 'send-fill' },
     phpMyAdmin: { title: 'phpMyAdmin', icon: 'database' },
-    MariaDB: { title: 'MariaDB', icon: 'database-fill' },
     Navicat: { title: 'Navicat', icon: 'table' },
     Wamp: { title: 'Wamp', icon: 'server' },
     Bitvise: { title: 'Bitvise', icon: 'shield-lock' },
@@ -194,7 +218,9 @@ export const technologies: {
 
 export type LangageKey = keyof typeof technologies.langage;
 export type FrameworkKey = keyof typeof technologies.framework;
+export type LibrairieKey = keyof typeof technologies.librairie;
 export type IDEKey = keyof typeof technologies.IDE;
+export type databaseKey = keyof typeof technologies.database;
 export type SoftwareKey = keyof typeof technologies.software;
 export type OtherKey = keyof typeof technologies.other;
 export type SubjectKey = keyof typeof technologies.subject;

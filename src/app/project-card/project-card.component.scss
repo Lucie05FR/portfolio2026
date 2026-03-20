@@ -1,12 +1,24 @@
-::ng-deep .card:hover,
-::ng-deep button:hover {
-  transform: scale(1.03);
-  color: var(--bs-primary);
-  background-color: var(--bs-secondary);
-  transition: all 0.5s ease;
-}
-
-::ng-deep .card,
-::ng-deep button {
+::ng-deep .card {
+  position: relative;
   transition: all 0.3s ease !important;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--bs-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+
+    &::after {
+      opacity: 0.15;
+    }
+  }
 }

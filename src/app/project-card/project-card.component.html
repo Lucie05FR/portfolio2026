@@ -1,6 +1,6 @@
 @if (project) {
   <div
-    class="card col h-100"
+    class="card col h-100 rounded-3"
     style="cursor: pointer"
     [routerLink]="['/project', this.project.order]"
   >
@@ -27,52 +27,27 @@
       <div class="col-md-8">
         <div class="card-body d-flex flex-column h-100">
           <h6 class="card-title">{{ this.project.name }}</h6>
-          <small class="card-text text-info mb-2">{{
+          <small class="card-text text-primary mb-2">{{
             this.project.shortDescription
           }}</small>
           <div class="container-fluid mt-auto p-0 d-flex flex-wrap gap-2">
             <!-- LANGAGES -->
-            @if (this.isArray(this.project.langage)) {
-              @for (langage of this.project.langage; track langage) {
-                <button
-                  type="button"
-                  class="btn btn-secondary btn-sm border"
-                  disabled
-                  style="opacity: 70%; width: fit-content"
-                >
-                  {{ langage }}
-                </button>
-              }
-            } @else if (this.project.langage) {
-              <button
-                type="button"
-                class="btn btn-secondary btn-sm border"
-                disabled
-                style="opacity: 70%; width: fit-content"
-              >
-                {{ this.project.langage }}
+            @for (
+              langage of this.toArray(this.project.langage);
+              track langage
+            ) {
+              <button class="btn btn-secondary btn-sm border rounded-3">
+                {{ getTechno("langage", langage).title }}
               </button>
             }
+
             <!-- FRAMEWORKS -->
-            @if (isArray(this.project.framework)) {
-              @for (framework of this.project.framework; track framework) {
-                <button
-                  type="button"
-                  class="btn btn-info btn-sm"
-                  disabled
-                  style="opacity: 70%; width: fit-content"
-                >
-                  {{ framework }}
-                </button>
-              }
-            } @else if (this.project.framework) {
-              <button
-                type="button"
-                class="btn btn-info btn-sm"
-                disabled
-                style="opacity: 70%; width: fit-content"
-              >
-                {{ this.project.framework }}
+            @for (
+              framework of this.toArray(this.project.framework);
+              track framework
+            ) {
+              <button class="btn btn-sm border rounded-3">
+                {{ getTechno("framework", framework).title }}
               </button>
             }
           </div>

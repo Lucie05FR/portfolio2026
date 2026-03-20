@@ -10,6 +10,7 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { RouterModule } from '@angular/router';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProjectCardComponent } from './project-card/project-card.component';
     ErrorComponent,
     TechnologiesComponent,
     ProjectListComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

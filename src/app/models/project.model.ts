@@ -2,9 +2,11 @@ import { clientType } from './client.type';
 import { CollaboratorKey } from './collaborators.model';
 import { Picture } from './picture.model';
 import {
+  databaseKey,
   FrameworkKey,
   IDEKey,
   LangageKey,
+  LibrairieKey,
   OtherKey,
   SoftwareKey,
   SubjectKey,
@@ -24,7 +26,9 @@ export interface ProjectModel {
   link?: string | string[];
   langage?: LangageKey | LangageKey[];
   framework?: FrameworkKey | FrameworkKey[];
+  librairie?: LibrairieKey | LibrairieKey[];
   IDE?: IDEKey | IDEKey[];
+  database?: databaseKey | databaseKey[];
   software?: SoftwareKey | SoftwareKey[];
   other?: OtherKey | OtherKey[];
 }

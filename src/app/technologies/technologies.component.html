@@ -3,14 +3,14 @@
 
   @for (section of this.sections; track section.category) {
     <div class="mb-5">
-      <h5 class="text-info mb-3">
-        <i class="bi bi-{{ section.icon }} text-info"></i> {{ section.label
+      <h5 class="text-primary mb-3">
+        <i class="bi bi-{{ section.icon }} text-primary"></i> {{ section.label
         }}{{ section.category === "other" ? "" : "s" }}
       </h5>
 
       <div class="d-flex flex-wrap gap-2">
         @for (entry of getEntries(section.category); track entry.key) {
-          <div class="border rounded p-2 d-flex align-items-center gap-2">
+          <div class="border rounded-3 bg-secondary py-1 px-2  d-flex align-items-center gap-2">
             @if (entry.tech.icon || section.label === "IDE") {
               <i
                 class="bi bi-{{
@@ -22,7 +22,7 @@
                 }}"
               ></i>
             }
-            <span class="text-center">{{ entry.tech.title }}</span>
+            <small class="text-center">{{ entry.tech.title }}</small>
           </div>
         }
       </div>

@@ -1,6 +1,7 @@
 ::ng-deep img:hover,
 ::ng-deep .border:hover {
   transform: scale(1.02);
+  background-color: var(--bs-secondary);
 }
 
 ::ng-deep img,
@@ -13,4 +14,7 @@ button {
 }
 button:last-child {
   margin-right: 0px;
+}
+.img-wrapper {
+  cursor: zoom-in;
 }

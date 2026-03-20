@@ -3,11 +3,10 @@ import { ProjectService } from '../services/project.service';
 import {
   subjects,
   subjectType,
-  Technologie,
   TechnologieCategory,
   technologies,
 } from '../models/technologies.model';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({

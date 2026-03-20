@@ -1,22 +1,47 @@
 .body {
   margin: 30px 100px !important;
-  min-height: 70vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
 }
 
-.body {
-  flex: 1;
+::ng-deep .img-wrapper {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--bs-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+
+    &::after {
+      opacity: 0.15;
+    }
+  }
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--bs-secondary) !important;
-  backdrop-filter: blur(150px);
-  -webkit-backdrop-filter: blur(10px);
-  .navbar-brand {
-    margin-right: 25px !important;
-  }
+.navbar-brand:hover,
+.nav-item:hover,
+.nav-link:hover,
+.navbar-text:hover,
+i:hover {
+  transform: scale(0.98);
+  transition: all 0.3s ease;
+  color: var(--bs-primary) !important;
+}
+.navbar-brand,
+.nav-item,
+.nav-link,
+.navbar-text,
+i {
+  transition: all 0.3s ease;
 }

@@ -287,4 +287,47 @@ export const projectsDetails: ProjectModel[] = [
     IDE: 'PHPStorm',
     subject: 'Web',
   },
+
+  // -------------------------------------------------------------------------
+  {
+    order: 11,
+    name: "Gestionnaire d'emplois du temps",
+    shortDescription:
+      "Application de gestion de ressources et d'emplois du temps pour étudiants et professeurs.",
+    description:
+      "Projet réalisé en binôme consistant à développer une application web de gestion d'emplois du temps. L'application distingue deux profils : étudiants et professeurs. Elle permet de gérer des cours, d'inscrire des élèves et d'affecter des professeurs, tout en s'assurant de l'absence de conflits horaires. Chaque utilisateur peut rendre son emploi du temps public ou privé, et les professeurs accèdent automatiquement aux plannings de leurs étudiants.",
+    details:
+      'Le projet intègre une authentification par token, une API REST respectant la nomenclature des codes HTTP, et une séparation stricte des responsabilités entre contrôleurs, services et couche API.',
+    productTime: '2 mois',
+    pictures: [
+      {
+        emplacement: 'img29.png',
+        description: "Page s'inscrire à un cours",
+      },
+      {
+        emplacement: 'img30.png',
+        description: "Page de l'emploi du temps",
+      },
+      {
+        emplacement: 'img27.png',
+        description: 'Page gestion de profil',
+      },
+      {
+        emplacement: 'img28.png',
+        description: 'Page gestion des cours',
+      },
+      {
+        emplacement: 'img31.png',
+        description: 'routes',
+      },
+    ],
+    madeFor: "l'université Lyon 1",
+    langage: ['HTML', 'CSS', 'TypeScript'],
+    framework: ['VueJs', 'Express'],
+    librairie: ['PrimeVue', 'Sequelize'],
+    database: 'SQLite',
+    IDE: 'PHPStorm',
+    other: ['GitLab', 'Swagger'],
+    subject: 'Web',
+  },
 ];

@@ -30,10 +30,11 @@ export const frameworks = [
   'NextJs',
   'Bootstrap',
   'TailwindCSS',
+  'Express',
 ] as const;
 export type frameworkType = (typeof frameworks)[number];
 
-export const librairies = ['ThreeJs'] as const;
+export const librairies = ['ThreeJs', 'PrimeVue', 'Sequelize'] as const;
 export type librairieType = (typeof librairies)[number];
 
 export const IDE = [
@@ -80,6 +81,7 @@ export const other = [
   'Fog',
   'Docker',
   'Mailhog',
+  'Swagger',
 ] as const;
 
 export type otherType = (typeof other)[number];
@@ -161,10 +163,13 @@ export const technologies: {
     NextJs: { title: 'Next.js', icon: 'forward' },
     Bootstrap: { title: 'Bootstrap', icon: 'bootstrap' },
     TailwindCSS: { title: 'Tailwind CSS', icon: 'palette2' },
+    Express: { title: 'Express', icon: 'server' },
   },
 
   librairie: {
     ThreeJs: { title: 'Three.js', icon: 'triangle' },
+    PrimeVue: { title: 'PrimeVue', icon: 'grid-1x2' },
+    Sequelize: { title: 'Sequelize', icon: 'database' },
   },
 
   IDE: {
@@ -207,6 +212,7 @@ export const technologies: {
     Mailhog: { title: 'Mailhog', icon: 'envelope' },
     MQTT: { title: 'MQTT', icon: 'wifi' },
     Fog: { title: 'Fog Project', icon: 'cloud' },
+    Swagger: { title: 'Swagger', icon: 'braces' },
   },
 
   subject: {

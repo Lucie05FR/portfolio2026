@@ -24,7 +24,13 @@
           />
         </div>
       }
-      <div class="col-md-8">
+      <div
+        class="{{
+          this.project.pictures && this.project.pictures.length > 0
+            ? 'col-md-8'
+            : ''
+        }}"
+      >
         <div class="card-body d-flex flex-column h-100">
           <h6 class="card-title">{{ this.project.name }}</h6>
           <small class="card-text text-primary mb-2">{{

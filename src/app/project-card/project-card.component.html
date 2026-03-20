@@ -1,6 +1,6 @@
 @if (project) {
   <div
-    class="card col h-100 rounded-4"
+    class="card col h-100 rounded-4 border-0 bg-secondary"
     style="cursor: pointer"
     [routerLink]="['/project', this.project.order]"
   >
@@ -42,7 +42,7 @@
               langage of this.toArray(this.project.langage);
               track langage
             ) {
-              <button class="btn btn-secondary btn-sm border rounded-3">
+              <button class="btn bg-dark btn-sm rounded-3">
                 {{ getTechno("langage", langage).title }}
               </button>
             }

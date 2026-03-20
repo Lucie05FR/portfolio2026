@@ -66,7 +66,7 @@ export class AboutComponent {
       title: 'Alternance - Scantech',
       description: "Contrat d'apprentissage réalisé en 3ème année de BUT",
       icon: 'building',
-      project: 10,
+      project: 13,
     },
   ];
 

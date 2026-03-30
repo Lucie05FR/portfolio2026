@@ -145,6 +145,32 @@ export const projectsDetails: ProjectModel[] = [
   // -------------------------------------------------------------------------
   {
     order: 6,
+    name: 'Cinémas de France',
+    shortDescription:
+      'Application mobile recensant les cinémas de France avec géolocalisation et fiches détaillées.',
+    description:
+      "Application mobile exploitant une API publique recensant les cinémas français (TMDB). Elle propose une carte interactive affichant les cinémas à proximité de l'utilisateur grâce à la géolocalisation, une liste complète des établissements avec leurs informations clés, et une page de détail pour chaque cinéma.",
+    productTime: 'Mars 2025',
+    pictures: [
+      { emplacement: 'img36.png', description: "Logo de l'application" },
+      { emplacement: 'img38.jpg', description: 'Page de la map' },
+      {
+        emplacement: 'img39.jpg',
+        description: 'Onglet listant tout les cinémas',
+      },
+      { emplacement: 'img37.jpg', description: "Page détails d'un cinéma" },
+    ],
+    madeFor: "l'université Lyon 1",
+    langage: ['Java', 'XML'],
+    IDE: 'AndroidStudio',
+    other: 'GitHub',
+    subject: 'Mobile',
+    link: 'https://github.com/Lucie05FR/AppliCinemasFrancais',
+  },
+
+  // -------------------------------------------------------------------------
+  {
+    order: 7,
     name: "Implémentation d'un système d'inventaire, gestion d'un parc informatique",
     shortDescription:
       "Développement d'un outil de gestion du parc informatique pour le Greta de l'Ain, intégré à une architecture existante.",
@@ -184,7 +210,7 @@ export const projectsDetails: ProjectModel[] = [
 
   // -------------------------------------------------------------------------
   {
-    order: 7,
+    order: 8,
     name: "Gestionnaire d'emplois du temps",
     shortDescription:
       "Application de gestion de ressources et d'emplois du temps pour étudiants et professeurs.",
@@ -228,7 +254,7 @@ export const projectsDetails: ProjectModel[] = [
 
   // -------------------------------------------------------------------------
   {
-    order: 8,
+    order: 9,
     name: 'TvTime - Gestionnaire de films & séries',
     shortDescription:
       'Application web de gestion de films et séries personnel.',
@@ -266,7 +292,7 @@ export const projectsDetails: ProjectModel[] = [
 
   // -------------------------------------------------------------------------
   {
-    order: 9,
+    order: 10,
     name: 'Spotify',
     shortDescription:
       "Recréation d'une expérience Spotify avec recherche, favoris, playlists et recommandations personnalisées.",
@@ -287,7 +313,7 @@ export const projectsDetails: ProjectModel[] = [
 
   // -------------------------------------------------------------------------
   {
-    order: 10,
+    order: 11,
     name: 'Mini monde Mario',
     shortDescription:
       "Mini jeu 3D inspiré de l'univers Mario, développé avec Three.js et navigable à la première personne.",
@@ -327,7 +353,7 @@ export const projectsDetails: ProjectModel[] = [
 
   // -------------------------------------------------------------------------
   {
-    order: 11,
+    order: 12,
     name: 'Création de mon portfolio',
     shortDescription:
       'Portfolio personnel présentant mes projets, compétences et parcours de développeuse.',
@@ -346,7 +372,7 @@ export const projectsDetails: ProjectModel[] = [
 
   // -------------------------------------------------------------------------
   {
-    order: 12,
+    order: 13,
     name: "Entretien d'un site web",
     shortDescription:
       "Maintenance et évolution du site web de l'association des Estivales de Brou.",
@@ -374,7 +400,7 @@ export const projectsDetails: ProjectModel[] = [
 
   // -------------------------------------------------------------------------
   {
-    order: 13,
+    order: 14,
     name: 'Regroupement de simulateurs',
     shortDescription:
       "Développement d'une interface centralisée regroupant les simulateurs internes de Scantech pour faciliter les tests et démonstrations.",

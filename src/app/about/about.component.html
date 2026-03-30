@@ -54,10 +54,10 @@
       @for (element of this.centreInterets; track element) {
         <div class="rounded-4 align-items-center gap-3 p-3 bg-dark">
           <div class="d-flex align-items-center gap-2">
-            <i class="bi bi-{{ element.icon }} text-primary"></i>
-            <p class="m-0 text-primary">{{ element.title }}</p>
+            <i class="bi bi-{{ element.icon }}"></i>
+            <p class="m-0">{{ element.title }}</p>
           </div>
-          <small class="m-0">{{ element.description }}</small>
+          <small class="m-0 text-primary">{{ element.description }}</small>
         </div>
       }
     </div>

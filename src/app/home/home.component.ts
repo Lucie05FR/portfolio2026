@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ProjectService } from '../services/project.service';
 import {
   Technologie,
@@ -65,6 +65,11 @@ export class HomeComponent {
 
   @ViewChild('skillsContainer') skillsContainer!: ElementRef;
 
+  @HostListener('window:resize')
+  onResize() {
+    this.initSkillsAnimation();
+  }
+
   ngAfterViewInit() {
     this.initSkillsAnimation();
   }
@@ -74,8 +79,12 @@ export class HomeComponent {
     const badges = Array.from(
       container.querySelectorAll('.skill-badge'),
     ) as HTMLElement[];
-    const width = 700;
-    const height = 350;
+
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+    const width = containerWidth * 0.9;
+    const height = containerHeight * 0.9;
+
     const placed: { x: number; y: number; w: number; h: number }[] = [];
     const padding = 15;
 
@@ -96,7 +105,6 @@ export class HomeComponent {
           const overlapY = Math.abs(y - p.y) < (bh + p.h) / 2 + padding;
           return !(overlapX && overlapY);
         });
-
         attempts++;
       }
 

@@ -232,11 +232,11 @@ export type OtherKey = keyof typeof technologies.other;
 export type SubjectKey = keyof typeof technologies.subject;
 
 export const categoryColors: Partial<Record<TechnologieCategory, string>> = {
-  langage: 'bg-secondary border',
-  framework: 'bg-dark border',
-  librairie: 'border',
-  IDE: 'bg-dark',
-  database: '',
-  software: 'bg-secondary',
-  other: 'border',
+  langage: 'bg-secondary bg-opacity-75',
+  framework: 'bg-dark bg-opacity-75',
+  librairie: 'border-secondary border bg-dark bg-opacity-75',
+  IDE: 'bg-secondary bg-opacity-25',
+  database: 'border bg-secondary bg-opacity-50',
+  software: 'border-secondary border',
+  other: 'bg-primary bg-opacity-50',
 };

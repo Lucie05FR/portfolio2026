@@ -41,17 +41,19 @@
 
 <div class="d-flex align-items-center d-flex justify-content-center gap-2">
   <i class="bi bi-geo-alt-fill fs-5"></i>
-  <p class="m-0">Aix-les-Bains</p>
+  <p class="m-0">Auvergne-Rhône-Alpes</p>
 </div>
 
-<div class="row mt-4 p-4 rounded-5 bg-secondary gap-0">
+<div class="row mt-4 p-4 rounded-5 bg-secondary gap-0 bg-opacity-75">
   <div class="col-12 col-md-7 order-2 order-md-2 mb-2 mb-md-0">
     <h4 class="text-center mb-3">Mes centres d'intérêts</h4>
     <div
       class="d-flex flex-wrap gap-2 align-items-center justify-content-center"
     >
       @for (element of this.centreInterets; track element) {
-        <div class="rounded-4 align-items-center gap-3 p-3 bg-dark">
+        <div
+          class="rounded-4 align-items-center gap-3 p-3 bg-dark bg-opacity-75"
+        >
           <div class="d-flex align-items-center gap-2">
             <i class="bi bi-{{ element.icon }}"></i>
             <p class="m-0">{{ element.title }}</p>
@@ -84,15 +86,26 @@
   <div class="timeline">
     @for (item of timeline; track item.date) {
       <div
-        class="timeline-item"
+        class="timeline-item {{ item.project ? 'cursor-pointer' : '' }}"
         [class.right]="$odd"
         (click)="item.project ? goToProject(item.project) : ''"
       >
         <div class="timeline-dot bg-primary rounded-circle">
           <i class="bi bi-{{ item.icon }} fs-5 text-secondary"></i>
         </div>
-        <div class="timeline-content rounded-4 p-3 bg-secondary">
-          <p class="text-primary fst-italic m-0">{{ item.date }}</p>
+        <div class="timeline-content rounded-4 p-3 bg-secondary bg-opacity-75">
+          <p class="text-primary fst-italic m-0 d-flex justify-content-between">
+            {{ item.date }}
+            @if (item.externLink) {
+              <a
+                class="cursor-pointer"
+                [href]="item.externLink"
+                target="_blank"
+              >
+                <i class="bi bi-box-arrow-up-right text-primary"></i>
+              </a>
+            }
+          </p>
           <h6 class="text-light mt-1 mb-1">{{ item.title }}</h6>
           <small class="text-primary">{{ item.description }}</small>
           @if (item.project) {

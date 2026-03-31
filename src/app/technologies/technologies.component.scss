@@ -7,6 +7,14 @@
   transition: all 0.3s ease;
 }
 
+.flex-wrap .mb-5 {
+  width: 50%;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
 @media (max-width: 768px) {
   .flex-wrap .mb-5 {
     width: 100% !important;

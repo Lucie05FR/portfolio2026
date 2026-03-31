@@ -401,6 +401,40 @@ export const projectsDetails: ProjectModel[] = [
   // -------------------------------------------------------------------------
   {
     order: 14,
+    name: "Création d'un luminaire intelligent",
+    shortDescription:
+      "Maintenance et évolution du site web de l'association des Estivales de Brou.",
+    description:
+      'Développement d’un système de luminaire intelligent basé sur un microcontrôleur ESP32, intégrant des capteurs de luminosité et de mouvement. Le dispositif collecte des données environnementales en temps réel et adapte automatiquement l’éclairage. Une interface web permet à l’utilisateur de contrôler les luminaires à distance (allumage, extinction, choix de couleur) et de configurer les paramètres (seuils, capteurs, intensité).',
+    details:
+      'Objectif : proposer une solution domotique intelligente, personnalisable et évolutive.',
+    productTime: 'Mars 2026',
+    pictures: [
+      {
+        emplacement: 'img40.png',
+        description: 'Page de connexion',
+      },
+      {
+        emplacement: 'img41.png',
+        description: 'Page de gestion des paramètres',
+      },
+      {
+        emplacement: 'img42.png',
+        description: "Page de création d'un luminaire",
+      },
+    ],
+    collaborators: 'leabarnezet',
+    langage: ['HTML', 'SCSS', 'TypeScript', 'CPP'],
+    framework: ['Angular', 'Bootstrap'],
+    IDE: ['VSCode', 'ArduinoIDE'],
+    software: 'Canva',
+    other: 'GitLab',
+    subject: 'Web',
+  },
+
+  // -------------------------------------------------------------------------
+  {
+    order: 15,
     name: 'Regroupement de simulateurs',
     shortDescription:
       "Développement d'une interface centralisée regroupant les simulateurs internes de Scantech pour faciliter les tests et démonstrations.",

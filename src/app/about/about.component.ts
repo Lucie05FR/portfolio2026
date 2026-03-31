@@ -6,6 +6,7 @@ interface elementInterface {
   title: string;
   description: string;
   link?: string;
+  externLink?: string;
   project?: number;
   date?: string;
 }
@@ -52,6 +53,7 @@ export class AboutComponent {
       description:
         "Parcours Réalisation d'Applications : conception, développement et validation - IUT Claude Bernard Lyon 1, site de Bourg-en-Bresse",
       icon: 'laptop',
+      externLink: 'https://www.univ-lyon1.fr',
     },
     {
       date: 'Avril - Juin 2025',
@@ -66,7 +68,7 @@ export class AboutComponent {
       title: 'Alternance - Scantech',
       description: "Contrat d'apprentissage réalisé en 3ème année de BUT",
       icon: 'building',
-      project: 13,
+      project: 15,
     },
   ];
 

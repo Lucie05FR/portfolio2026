@@ -39,7 +39,7 @@
     <div class="skills-container" #skillsContainer>
       @for (skill of skills; track skill.title; let i = $index) {
         <div
-          class="skill-badge rounded-4 px-2 py-1 gap-2 d-flex {{ skill.color }}"
+          class="skill-badge rounded-3 px-2 py-1 gap-2 d-flex {{ skill.color }}"
           [attr.data-index]="i"
         >
           @if (skill.icon) {

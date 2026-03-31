@@ -4,6 +4,7 @@ import {
   TechnologieCategory,
   Technologie,
   TechnoSection,
+  categoryColors,
 } from '../models/technologies.model';
 
 @Component({
@@ -13,6 +14,7 @@ import {
 })
 export class TechnologiesComponent {
   sections = TechnoSection;
+  categoryColors = categoryColors;
 
   getEntries(
     category: TechnologieCategory,

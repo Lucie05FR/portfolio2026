@@ -3,7 +3,7 @@
 
   <div class="d-flex flex-wrap">
     @for (section of this.sections; track section.category) {
-      <div class="mb-5" style="width: 50%">
+      <div class="mb-5 {{ section.category === 'other' ? 'full-width' : '' }}">
         <h5 class="text-primary mb-3">
           <i class="bi bi-{{ section.icon }} text-primary"></i>
           {{ section.label }}{{ section.category === "other" ? "" : "s" }}
@@ -12,7 +12,9 @@
         <div class="d-flex flex-wrap gap-2">
           @for (entry of getEntries(section.category); track entry.key) {
             <div
-              class="rounded-3 bg-secondary py-1 px-2 d-flex align-items-center gap-2"
+              class="rounded-3 {{
+                this.categoryColors[section.category]
+              }} py-1 px-2 d-flex align-items-center gap-2"
             >
               @if (entry.tech.icon || section.label === "IDE") {
                 <i

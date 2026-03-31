@@ -1,20 +1,11 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ProjectService } from '../services/project.service';
 import {
+  categoryColors,
   Technologie,
   TechnologieCategory,
   technologies,
 } from '../models/technologies.model';
-
-const categoryColors: Partial<Record<TechnologieCategory, string>> = {
-  langage: 'bg-secondary border',
-  framework: 'bg-dark border',
-  librairie: 'border',
-  IDE: 'bg-dark',
-  database: '',
-  software: 'bg-secondary',
-  other: 'border',
-};
 
 interface SkillDisplay extends Technologie {
   category: TechnologieCategory;

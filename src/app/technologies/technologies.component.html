@@ -1,33 +1,35 @@
-<div class="container py-4">
+<div class="container-fluid py-4">
   <h3 class="text-center mb-5">Technologies & Outils</h3>
 
-  @for (section of this.sections; track section.category) {
-    <div class="mb-5">
-      <h5 class="text-primary mb-3">
-        <i class="bi bi-{{ section.icon }} text-primary"></i> {{ section.label
-        }}{{ section.category === "other" ? "" : "s" }}
-      </h5>
+  <div class="d-flex flex-wrap">
+    @for (section of this.sections; track section.category) {
+      <div class="mb-5" style="width: 50%">
+        <h5 class="text-primary mb-3">
+          <i class="bi bi-{{ section.icon }} text-primary"></i>
+          {{ section.label }}{{ section.category === "other" ? "" : "s" }}
+        </h5>
 
-      <div class="d-flex flex-wrap gap-2">
-        @for (entry of getEntries(section.category); track entry.key) {
-          <div
-            class="rounded-3 bg-secondary py-1 px-2 d-flex align-items-center gap-2"
-          >
-            @if (entry.tech.icon || section.label === "IDE") {
-              <i
-                class="bi bi-{{
-                  entry.tech.icon
-                    ? entry.tech.icon
-                    : section.label === 'IDE'
-                      ? section.icon
-                      : ''
-                }}"
-              ></i>
-            }
-            <small class="text-center">{{ entry.tech.title }}</small>
-          </div>
-        }
+        <div class="d-flex flex-wrap gap-2">
+          @for (entry of getEntries(section.category); track entry.key) {
+            <div
+              class="rounded-3 bg-secondary py-1 px-2 d-flex align-items-center gap-2"
+            >
+              @if (entry.tech.icon || section.label === "IDE") {
+                <i
+                  class="bi bi-{{
+                    entry.tech.icon
+                      ? entry.tech.icon
+                      : section.label === 'IDE'
+                        ? section.icon
+                        : ''
+                  }}"
+                ></i>
+              }
+              <small class="text-center">{{ entry.tech.title }}</small>
+            </div>
+          }
+        </div>
       </div>
-    </div>
-  }
+    }
+  </div>
 </div>

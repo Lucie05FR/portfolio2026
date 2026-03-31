@@ -1,8 +1,14 @@
-.flex-wrap > div:hover {
+.flex-wrap > .rounded-3:hover {
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
 
-.flex-wrap > div {
+.flex-wrap > .rounded-3 {
   transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .flex-wrap .mb-5 {
+    width: 100% !important;
+  }
 }

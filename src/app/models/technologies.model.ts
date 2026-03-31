@@ -230,3 +230,13 @@ export type databaseKey = keyof typeof technologies.database;
 export type SoftwareKey = keyof typeof technologies.software;
 export type OtherKey = keyof typeof technologies.other;
 export type SubjectKey = keyof typeof technologies.subject;
+
+export const categoryColors: Partial<Record<TechnologieCategory, string>> = {
+  langage: 'bg-secondary border',
+  framework: 'bg-dark border',
+  librairie: 'border',
+  IDE: 'bg-dark',
+  database: '',
+  software: 'bg-secondary',
+  other: 'border',
+};

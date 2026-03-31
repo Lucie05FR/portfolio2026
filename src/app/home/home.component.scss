@@ -1,0 +1,33 @@
+.skills-container {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-badge {
+  position: absolute;
+  animation: float 3s ease-in-out infinite;
+  animation-delay: calc(var(--float-delay, 0) * 1s);
+  white-space: nowrap;
+  transform: translate(var(--x), var(--y));
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(var(--x), var(--y));
+  }
+  50% {
+    transform: translate(calc(var(--x) + 6px), calc(var(--y) - 6px));
+  }
+}
+
+.skills-container {
+  position: relative;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

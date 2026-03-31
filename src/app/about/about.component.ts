@@ -34,7 +34,7 @@ export class AboutComponent {
     {
       icon: 'code',
       title: 'Le développement informatique',
-      description: 'Apprendre de nouvelles technologies',
+      description: 'Faire évoluer mes compétences',
     },
   ];
 
@@ -59,7 +59,7 @@ export class AboutComponent {
       description:
         'Mission au sein du service informatique dans le cadre de ma 2ème année de BUT',
       icon: 'briefcase',
-      project: 6,
+      project: 7,
     },
     {
       date: '2025 - 2026',

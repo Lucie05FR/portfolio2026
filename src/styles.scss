@@ -1,8 +1,12 @@
-$primary: #bc2f52;
-$secondary: #4d0615; // nav et effets
-$info: rgb(0, 255, 76); // borders et titres
-$light: #fc8e8e; // texte
-$dark: #37030c;
+// $light: #f0ebd8; // texte
+// $primary: #748cab;
+// $secondary: #3e5c76; // nav et effets
+// $dark: #1d2d44;
+
+$light: #eaf2e1; // texte
+$primary: #bcbd8b;
+$secondary: #717744; // nav et effets
+$dark: #373d20;
 
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";

@@ -11,7 +11,7 @@
     >Étudiante en 3ème année de BUT Informatique à Lyon 1</small
   >
 </div>
-<div class="col d-flex justify-content-center gap-2 my-3">
+<div class="col d-flex justify-content-center gap-2 my-3 flex-wrap">
   <a
     href="https://github.com/Lucie05FR"
     target="_blank"
@@ -44,13 +44,10 @@
   <p class="m-0">Aix-les-Bains</p>
 </div>
 
-<div
-  class="d-flex justify-content-between gap-2 mt-4 p-5 rounded-5 bg-secondary"
-  style="width: 100%"
->
-  <div style="width: 50%">
+<div class="row mt-4 p-4 rounded-5 bg-secondary gap-0" style="width: 100%">
+  <div class="col-12 col-md-7 order-1 order-md-2 mb-4 mb-md-0">
     <h4 class="text-center mb-3">Mes centres d'intérêts</h4>
-    <div class="d-flex flex-wrap gap-2">
+    <div class="d-flex flex-wrap gap-2 align-items-center justify-content-center">
       @for (element of this.centreInterets; track element) {
         <div class="rounded-4 align-items-center gap-3 p-3 bg-dark">
           <div class="d-flex align-items-center gap-2">
@@ -62,7 +59,7 @@
       }
     </div>
   </div>
-  <div style="width: 50%">
+  <div class="col-12 col-md-5 order-2 order-md-1 text-center">
     <h4 class="text-center mb-3">A propos de moi</h4>
     <small class="text-primary">
       Développeuse web passionnée par la création d'interfaces soignées, je
@@ -94,6 +91,12 @@
           <p class="text-primary fst-italic m-0">{{ item.date }}</p>
           <h6 class="text-light mt-1 mb-1">{{ item.title }}</h6>
           <small class="text-primary">{{ item.description }}</small>
+          @if (item.project) {
+            <p class="text-dark gap-2 m-0 pt-2">
+              <i class="bi bi-box-arrow-up-right text-dark me-2"></i>Voir le
+              projet
+            </p>
+          }
         </div>
       </div>
     }

@@ -25,7 +25,6 @@ declare var bootstrap: any;
 export class ProjectComponent implements OnInit {
   project?: ProjectModel;
   sections = TechnoSection;
-  public technoIndex = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -118,7 +117,10 @@ export class ProjectComponent implements OnInit {
     modal.show();
   }
 
-  setTechnoIndex() {
-    this.technoIndex++;
+  getVisibleSectionIndex(category: string): number {
+    if (!this.project) return 0;
+    return this.sections
+      .filter((s) => (this.project as any)[s.category])
+      .findIndex((s) => s.category === category);
   }
 }

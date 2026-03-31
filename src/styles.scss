@@ -35,26 +35,30 @@ $dark: #373d20;
   transition: all 0.5s ease;
 }
 
-// Bulle
-.cursor-bubble {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background: #{$primary};
-  opacity: 20%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  transition:
-    transform 0.15s ease,
-    opacity 0.15s ease;
+@media (min-width: 768px) {
+  // Bulle
+  .cursor-bubble {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #{$primary};
+    opacity: 20%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition:
+      transform 0.15s ease,
+      opacity 0.15s ease;
+  }
+
+  .cursor-bubble.clicked {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 10%;
+  }
 }
 
-.cursor-bubble.clicked {
-  transform: translate(-50%, -50%) scale(1.3);
-  opacity: 10%;
-}
+// polices d'écritures
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lexend:wght@100..900&family=Michroma&family=Outfit:wght@100..900&display=swap");
 
 body {
@@ -72,3 +76,4 @@ h6 {
 h5 {
   color: var(--bs-primary);
 }
+

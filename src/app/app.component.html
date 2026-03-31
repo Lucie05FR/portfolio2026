@@ -5,10 +5,12 @@
   [style.top.px]="bubbleY"
 ></div>
 
-<div id="circle-medium"></div>
-<div id="circle-large"></div>
-<div id="circle-xlarge"></div>
-<div id="circle-xxlarge"></div>
+<div class="background-circles">
+  <div id="circle-medium"></div>
+  <div id="circle-large"></div>
+  <div id="circle-xlarge"></div>
+  <div id="circle-xxlarge"></div>
+</div>
 
 <nav
   class="navbar navbar-expand-lg border-bottom navbar-dark bg-secondary sticky-top"
@@ -30,11 +32,13 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a
+
             class="nav-link dropdown-toggle"
+            [class.text-primary]="isProjectsActive()"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
-            aria-expanded="false"
+
           >
             Projets
           </a>
@@ -47,6 +51,7 @@
                 <a
                   class="dropdown-item rounded-4 small py-2"
                   [routerLink]="['/projects', subject]"
+                  routerLinkActive="text-primary"
                   >{{ getTechno("subject", subject).title }}</a
                 >
               </li>
@@ -54,10 +59,19 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="technologies">Compétences</a>
+          <a
+            class="nav-link"
+            routerLink="/technologies"
+            routerLinkActive="text-primary"
+            >Compétences</a
+          >
         </li>
       </ul>
-      <span class="navbar-text pe-2" [routerLink]="['/aboutMe']">
+      <span
+        class="navbar-text pe-2"
+        [routerLink]="['/aboutMe']"
+        routerLinkActive="text-primary"
+      >
         En savoir plus
       </span>
     </div>

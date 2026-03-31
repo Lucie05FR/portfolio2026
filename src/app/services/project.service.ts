@@ -7,7 +7,9 @@ import { subjectType } from '../models/technologies.model';
   providedIn: 'root',
 })
 export class ProjectService {
-  public projects: ProjectModel[] = projectsDetails;
+  public projects: ProjectModel[] = [...projectsDetails].sort(
+    (a, b) => b.order - a.order,
+  );
 
   getProjects(): ProjectModel[] {
     return [...this.projects];

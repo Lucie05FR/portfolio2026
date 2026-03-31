@@ -56,7 +56,6 @@
           <div class="d-flex flex-wrap gap-2">
             @for (section of sections; track section.category) {
               @if (project[section.category]) {
-                {{ this.setTechnoIndex() }}
                 <div class="p-3 rounded-4 bg-secondary">
                   <div class="d-flex align-items-center mb-2">
                     @if (section.icon) {
@@ -75,7 +74,9 @@
                       <button
                         type="button"
                         class="btn btn-sm rounded-3 {{
-                          this.technoIndex % 2 === 0 ? 'border' : 'btn-dark'
+                          getVisibleSectionIndex(section.category) % 2 !== 0
+                            ? 'border'
+                            : 'btn-dark'
                         }}"
                       >
                         @if (getTechno(section.category, key).icon) {

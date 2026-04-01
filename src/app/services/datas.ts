@@ -62,7 +62,7 @@ export const projectsDetails: ProjectModel[] = [
     collaborators: ['amandinemotta'],
     langage: 'Processing',
     IDE: 'ArduinoIDE',
-    other: 'GitLab',
+    other: ['GitLab', 'ESP32'],
     subject: 'Programmation',
   },
 
@@ -401,15 +401,21 @@ export const projectsDetails: ProjectModel[] = [
   // -------------------------------------------------------------------------
   {
     order: 14,
-    name: "Création d'un luminaire intelligent",
+    name: 'Luminaire intelligent connecté (ESP32)',
     shortDescription:
-      "Maintenance et évolution du site web de l'association des Estivales de Brou.",
+      'Développement d’un luminaire connecté permettant d’automatiser et de piloter l’éclairage à distance via une interface web.',
+
     description:
-      'Développement d’un système de luminaire intelligent basé sur un microcontrôleur ESP32, intégrant des capteurs de luminosité et de mouvement. Le dispositif collecte des données environnementales en temps réel et adapte automatiquement l’éclairage. Une interface web permet à l’utilisateur de contrôler les luminaires à distance (allumage, extinction, choix de couleur) et de configurer les paramètres (seuils, capteurs, intensité).',
+      'Conception et développement d’un système de luminaire intelligent basé sur un microcontrôleur ESP32, intégrant des capteurs de luminosité et de mouvement. Le dispositif collecte des données en temps réel afin d’adapter automatiquement l’éclairage selon l’environnement. Une interface web permet à l’utilisateur de contrôler les luminaires à distance (allumage, extinction, choix de couleur) et de configurer les paramètres (seuils, capteurs, intensité). Le projet repose sur une architecture complète incluant un objet connecté, une API, une base de données et une interface web.',
+
     details:
-      'Objectif : proposer une solution domotique intelligente, personnalisable et évolutive.',
+      'Solution intelligente, personnalisable et évolutive, mettant en œuvre une architecture complète objet connecté / API / interface web.',
     productTime: 'Mars 2026',
     pictures: [
+      {
+        emplacement: 'img43.png',
+        description: 'ESP32 configuration',
+      },
       {
         emplacement: 'img40.png',
         description: 'Page de connexion',
@@ -422,13 +428,17 @@ export const projectsDetails: ProjectModel[] = [
         emplacement: 'img42.png',
         description: "Page de création d'un luminaire",
       },
+      {
+        emplacement: 'img44.png',
+        description: 'Architecture du projet',
+      },
     ],
     collaborators: 'leabarnezet',
     langage: ['HTML', 'SCSS', 'TypeScript', 'CPP'],
     framework: ['Angular', 'Bootstrap'],
     IDE: ['VSCode', 'ArduinoIDE'],
     software: 'Canva',
-    other: 'GitLab',
+    other: ['GitLab', 'ESP32'],
     subject: 'Web',
   },
 

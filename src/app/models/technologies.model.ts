@@ -82,6 +82,7 @@ export const other = [
   'Docker',
   'Mailhog',
   'Swagger',
+  'ESP32',
 ] as const;
 
 export type otherType = (typeof other)[number];
@@ -213,6 +214,7 @@ export const technologies: {
     MQTT: { title: 'MQTT', icon: 'wifi' },
     Fog: { title: 'Fog Project', icon: 'cloud' },
     Swagger: { title: 'Swagger', icon: 'braces' },
+    ESP32: { title: 'ESP32', icon: 'cpu' },
   },
 
   subject: {

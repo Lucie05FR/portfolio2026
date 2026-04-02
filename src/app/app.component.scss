@@ -11,6 +11,28 @@
   }
 }
 
+@media (min-width: 768px) {
+  .theme-switch .theme-label {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .theme-switch:hover .theme-label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .theme-switch i {
+    transition: transform 0.2s ease;
+  }
+
+  .theme-switch:hover i {
+    transform: rotate(15deg) scale(1.1);
+  }
+}
+
 ::ng-deep .img-wrapper {
   position: relative;
   overflow: hidden;
@@ -50,26 +72,6 @@ i:hover {
 .navbar-text,
 i {
   transition: all 0.3s ease;
-}
-
-.theme-switch .theme-label {
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.theme-switch:hover .theme-label {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.theme-switch i {
-  transition: transform 0.2s ease;
-}
-
-.theme-switch:hover i {
-  transform: rotate(15deg) scale(1.1);
 }
 
 // ----- background animation -----

@@ -1,5 +1,5 @@
 <div class="container py-5">
-  <section class="text-center mb-5">
+  <section class="text-center mt-5">
     <h1 class="fw-bold">Renard Lucie</h1>
     <p class="text-primary fs-5 mb-3">Développeuse web & mobile</p>
     <p class="mx-auto" style="max-width: 800px">
@@ -8,35 +8,29 @@
     </p>
   </section>
 
-  <section>
-    <h5 class="text-primary text-center mb-3">Mes derniers projets</h5>
+  <section class="mt-5 pt-5">
+    <h5 class="text-primary text-center mb-3 mt-4">Mes derniers projets</h5>
     <div class="row row-cols-1 row-cols-md-2">
       @for (project of displayedProjects; track project) {
         <app-project-card [project]="project" class="p-1"></app-project-card>
       }
     </div>
-    <div class="text-center mt-3">
+    <div class="text-center mt-4">
       <a
         routerLink="/projects"
-        class="btn btn-sm btn-outline-secondary rounded-3"
+        class="btn btn-sm btn-outline-dark rounded-3 text-primary border-dark"
       >
         Voir tous les projets
       </a>
     </div>
   </section>
 
-  <div class="bg-secondary my-5" style="height: 1px"></div>
-
-  <section
-    class="skills-section"
-    routerLink="/technologies"
-    style="cursor: pointer"
-  >
-    <h5 class="text-primary text-center mb-4">
-      Echantillon de mes compétences
+  <section class="skills-section mt-5 pt-5">
+    <h5 class="text-primary text-center mb-4 mt-5">
+      Quelques-unes de mes compétences
     </h5>
 
-    <div class="skills-container" #skillsContainer>
+    <div class="skills-container mx-auto" #skillsContainer>
       @for (skill of skills; track skill.title; let i = $index) {
         <div
           class="skill-badge rounded-3 px-2 py-1 gap-2 d-flex {{ skill.color }}"
@@ -48,6 +42,45 @@
           <span>{{ skill.title }}</span>
         </div>
       }
+    </div>
+
+    <div class="text-center mt-4">
+      <a
+        routerLink="/technologies"
+        class="btn btn-sm btn-outline-dark rounded-3 text-primary border-dark"
+      >
+        Voir toutes les compétences
+      </a>
+    </div>
+  </section>
+
+  <section
+    class="text-center d-flex flex-column justify-content-center mt-5 pt-5"
+  >
+    <h5 class="text-primary text-center mb-4 mt-5">
+      Mon profil vous intéresse ?
+    </h5>
+    <p class="mb-3 mx-auto" style="max-width: 800px">
+      Je suis disponible pour échanger autour de nouvelles opportunités
+      professionnelles. Contactez-moi ou retrouvez-moi sur LinkedIn.
+    </p>
+    <div class="col d-flex justify-content-center gap-2 my-2 flex-wrap">
+      <a
+        href="mailto:lucierenardpro@gmail.com"
+        target="_blank"
+        class="btn btn-sm btn-secondary rounded-4 d-flex align-items-center gap-2"
+      >
+        <i class="bi bi-envelope-fill fs-5 ps-1"></i>
+        {{ "lucierenardpro@gmail.com" }}
+      </a>
+      <a
+        href="https://www.linkedin.com/in/lucie-renard-43ba72253/"
+        target="_blank"
+        class="btn btn-sm btn-secondary rounded-4 d-flex align-items-center gap-2"
+      >
+        <i class="bi bi-linkedin fs-5 ps-1"></i>
+        Mon LinkedIn
+      </a>
     </div>
   </section>
 </div>

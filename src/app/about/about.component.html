@@ -15,7 +15,7 @@
   <a
     href="https://github.com/Lucie05FR"
     target="_blank"
-    class="btn btn-sm btn-secondary rounded-4 d-flex align-items-center gap-2"
+    class="btn btn-sm bg-secondary rounded-4 d-flex align-items-center gap-2"
   >
     <i class="bi bi-github fs-5"></i>
 
@@ -24,7 +24,7 @@
   <a
     href="https://www.linkedin.com/in/lucie-renard-43ba72253/"
     target="_blank"
-    class="btn btn-sm btn-secondary rounded-4 d-flex align-items-center gap-2"
+    class="btn btn-sm bg-secondary rounded-4 d-flex align-items-center gap-2"
   >
     <i class="bi bi-linkedin fs-5 ps-1"></i>
     Mon LinkedIn
@@ -32,7 +32,7 @@
   <a
     href="mailto:lucierenardpro@gmail.com"
     target="_blank"
-    class="btn btn-sm btn-secondary rounded-4 d-flex align-items-center gap-2"
+    class="btn btn-sm bg-secondary rounded-4 d-flex align-items-center gap-2"
   >
     <i class="bi bi-envelope-fill fs-5 ps-1"></i>
     {{ "lucierenardpro@gmail.com" }}
@@ -135,10 +135,12 @@
           <h6 class="text-light mt-1 mb-1">{{ item.title }}</h6>
           <small class="text-primary">{{ item.description }}</small>
           @if (item.project) {
-            <p class="text-dark gap-2 m-0 pt-2">
-              <i class="bi bi-box-arrow-up-right text-dark me-2"></i>Voir le
-              projet
-            </p>
+            <div class="d-flex justify-content-end pt-2">
+              <p class="text-dark m-0 d-flex align-items-center gap-2">
+                <i class="bi bi-box-arrow-up-right text-dark"></i>
+                Voir le projet
+              </p>
+            </div>
           }
         </div>
       </div>

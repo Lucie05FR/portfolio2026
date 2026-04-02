@@ -20,7 +20,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-color: var(--bs-primary);
+    background-color: var(--color-primary);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -42,7 +42,7 @@
 i:hover {
   transform: scale(0.98);
   transition: all 0.3s ease;
-  color: var(--bs-primary) !important;
+  color: var(--color-primary) !important;
 }
 .navbar-brand,
 .nav-item,
@@ -50,6 +50,26 @@ i:hover {
 .navbar-text,
 i {
   transition: all 0.3s ease;
+}
+
+.theme-switch .theme-label {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.theme-switch:hover .theme-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.theme-switch i {
+  transition: transform 0.2s ease;
+}
+
+.theme-switch:hover i {
+  transform: rotate(15deg) scale(1.1);
 }
 
 // ----- background animation -----
@@ -66,7 +86,7 @@ i {
   animation-delay: 0.3s;
   top: 50px;
   left: -300px;
-  background: var(--bs-secondary);
+  background: var(--color-secondary);
   width: 600px;
   height: 600px;
   border-radius: 50%;

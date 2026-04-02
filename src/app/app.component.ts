@@ -3,6 +3,7 @@ import { ProjectService } from './services/project.service';
 import { TechnologieCategory, technologies } from './models/technologies.model';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -18,12 +19,14 @@ export class AppComponent {
   constructor(
     private router: Router,
     public projectService: ProjectService,
+    public themeService: ThemeService,
   ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
         window.scrollTo(0, 0);
       });
+    this.themeService.loadSavedTheme();
   }
 
   getTechno(category: TechnologieCategory, key: string) {

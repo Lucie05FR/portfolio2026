@@ -33,13 +33,11 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a
-
             class="nav-link dropdown-toggle"
             [class.text-primary]="isProjectsActive()"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
-
           >
             Projets
           </a>
@@ -59,22 +57,57 @@
             }
           </ul>
         </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            routerLink="/technologies"
-            routerLinkActive="text-primary"
-            >Compétences</a
-          >
+        <li
+          class="nav-item nav-link"
+          routerLink="/technologies"
+          routerLinkActive="text-primary"
+        >
+          Compétences
+        </li>
+
+        <li
+          class="nav-item nav-link"
+          routerLink="/aboutMe"
+          routerLinkActive="text-primary"
+        >
+          En savoir plus
         </li>
       </ul>
-      <span
-        class="navbar-text pe-2"
-        [routerLink]="['/aboutMe']"
-        routerLinkActive="text-primary"
-      >
-        En savoir plus
-      </span>
+
+      <!-- CHANGEMENT DE THEME -->
+      <div class="nav-item dropdown me-3 theme-switch">
+        <a
+          class="nav-link d-flex align-items-center gap-2"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+        >
+          <span class="theme-label text-primary"
+            >Envie de changer de couleur ?</span
+          >
+          <i class="bi bi-palette text-primary"></i>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-end rounded-4 p-0">
+          @for (theme of themeService.themes; track theme.name) {
+            <li>
+              <button
+                class="dropdown-item rounded-4 small py-2 d-flex align-items-center"
+                [class.text-primary]="
+                  themeService.currentTheme.name === theme.name
+                "
+                (click)="themeService.applyTheme(theme)"
+              >
+                <span>{{ theme.name }}</span>
+
+                @if (themeService.currentTheme.name === theme.name) {
+                  <i class="bi bi-check ms-auto text-primary"></i>
+                }
+              </button>
+            </li>
+          }
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

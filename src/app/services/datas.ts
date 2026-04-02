@@ -361,7 +361,7 @@ export const projectsDetails: ProjectModel[] = [
       "Portfolio conçu pour centraliser l'ensemble de mes réalisations et compétences en développement informatique. Régulièrement mis à jour au fil de mes projets, il permet à tout recruteur ou curieux d'explorer mon profil en détail.",
     details:
       "Projet personnel et évolutif, qui m'a également permis de progresser sur Angular, Bootstrap et la structuration d'une application front-end complète. Il a été pensé et conçu intelligemment pour qu'il soit pratique à entretenir.",
-    productTime: 'Mars 2026',
+    productTime: 'débuté en Mars 2026',
     langage: ['HTML', 'SCSS', 'TypeScript'],
     framework: ['Angular', 'Bootstrap'],
     IDE: 'VSCode',

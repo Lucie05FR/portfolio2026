@@ -83,6 +83,8 @@ export const other = [
   'Mailhog',
   'Swagger',
   'ESP32',
+  'Jira',
+  'Forgejo',
 ] as const;
 
 export type otherType = (typeof other)[number];
@@ -215,6 +217,8 @@ export const technologies: {
     Fog: { title: 'Fog Project', icon: 'cloud' },
     Swagger: { title: 'Swagger', icon: 'braces' },
     ESP32: { title: 'ESP32', icon: 'cpu' },
+    Jira: { title: 'Jira' },
+    Forgejo: { title: 'Forgejo' },
   },
 
   subject: {

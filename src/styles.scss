@@ -3,10 +3,10 @@
 // $secondary: #3e5c76; // nav et effets
 // $dark: #1d2d44;
 
-$light: #eaf2e1; // texte
-$primary: #bcbd8b;
-$secondary: #717744; // nav et effets
-$dark: #373d20;
+$light: #e1eef2;
+$primary: #8bbcbd;
+$secondary: #447177;
+$dark: #00363a;
 
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
@@ -18,10 +18,10 @@ $dark: #373d20;
   --bs-border-color-translucent: var(--color-primary);
   --bs-border-color: var(--color-primary);
 
-  --color-light:     #{$light};
-  --color-primary:   #{$primary};
+  --color-light: #{$light};
+  --color-primary: #{$primary};
   --color-secondary: #{$secondary};
-  --color-dark:      #{$dark};
+  --color-dark: #{$dark};
 }
 
 * {
@@ -100,4 +100,3 @@ h6 {
 h5 {
   color: var(--color-primary);
 }
-

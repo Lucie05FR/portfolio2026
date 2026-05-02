@@ -12,11 +12,11 @@ export interface Theme {
 export class ThemeService {
   themes: Theme[] = [
     {
-      name: 'Vert',
-      light: '#eaf2e1',
-      primary: '#bcbd8b',
-      secondary: '#717744',
-      dark: '#373d20',
+      name: 'Bleu',
+      light: '#e1eef2',
+      primary: '#8bbcbd',
+      secondary: '#447177',
+      dark: '#00363a',
     },
     {
       name: 'Sable',
@@ -24,13 +24,6 @@ export class ThemeService {
       primary: '#f7cead',
       secondary: '#a98467',
       dark: '#5c3d2e',
-    },
-    {
-      name: 'Bleu',
-      light: '#e1eef2',
-      primary: '#8bbcbd',
-      secondary: '#447177',
-      dark: '#00363a',
     },
     {
       name: 'Violet',
